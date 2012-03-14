@@ -1,0 +1,17 @@
+.mw_home {
+  ul.headlinesOnly {
+    li {
+      overflow:hidden;
+      &.firstItem {
+        > a {
+          padding:10px;
+          float:left;
+          img {
+            height:50px;
+            width:50px;
+          }
+        }
+      }
+    }
+  }
+}

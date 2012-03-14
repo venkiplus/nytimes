@@ -1,0 +1,14 @@
+@import "compass/reset";
+@import "compass";
+
+
+$sprite-spacing: 15px;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+@import "_lib.scss";
+@import "_base.scss";
+
+ @import "sections/_header.scss";
+
+ @import "pages/_home.scss";
