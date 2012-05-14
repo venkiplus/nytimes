@@ -54,7 +54,7 @@ $("./body") {
     insert_before("div") {
       urCarousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
       $(".//img") {
-        attribute("data-src") {
+        attribute("src") {
           value() {
             replace(/thumbStandard/, "popup")
           }

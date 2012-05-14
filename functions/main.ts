@@ -167,7 +167,7 @@
     ur_component("carousel", "button")
     ur_attribute("carousel-button-type", "prev")
   }
-  insert_bottom("div", "Next") {
+  insert_bottom("div", "Next", class:"icons-gray-r") {
     ur_component("carousel", "button")
     ur_attribute("carousel-button-type", "next")
   }

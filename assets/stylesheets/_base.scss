@@ -60,9 +60,13 @@ div[data-ur-carousel-component="button"][data-ur-state="disabled"] {
 }
 div[data-ur-carousel-button-type="prev"] {
   float:left;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 div[data-ur-carousel-button-type="next"] {
   float:right;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 div[data-ur-carousel-component="count"] {
   text-align:center;
