@@ -1,11 +1,18 @@
-@import "compass/reset";
+// Importing Compass, the framework we use for our stylesheets
 @import "compass";
+@import "compass/reset";
 
+// Implement spriting of icons with the following lines
+// The icons are in a folder called "icons"
+// Learn more about spriting here http://beta.moovweb.com/learn/reference/projects/images
 
-$sprite-spacing: 15px;
 @import "icons/*.png";
 @include all-icons-sprites;
 
+// We import all stylesheets in main.scss so that when Sass compiles,
+// all styles will be present in one file.
+// This means that whenever you make a new stylesheet, you must import
+// it here.
 @import "_lib.scss";
 @import "_base.scss";
 

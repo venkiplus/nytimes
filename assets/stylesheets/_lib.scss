@@ -15,6 +15,8 @@ $border1:       1px solid $border_color1;
 $border_color3: #999;
 $border3:       1px solid $border_color3;
 
+// Here we define our mixins. For more information on mixins and other
+// features of Sass, check out http://sass-lang.com
 
 @mixin sprite_offset($sprite, $offset_x, $offset_y: 0) {
   background-position: sprite-position($icons-sprites, $sprite, $offset_x, $offset_y);
@@ -41,7 +43,7 @@ $border3:       1px solid $border_color3;
   padding: 10px;
 }
 
-//light gray bar
+// Light gray bar mixin
 @mixin bar2 {
   @include grad2;
   border-top: #fff;
@@ -76,7 +78,7 @@ $border3:       1px solid $border_color3;
   }
 }
 
-//white
+// White bar mixin
 @mixin bar3 {
   background: #fff;
   border-bottom: $border1;

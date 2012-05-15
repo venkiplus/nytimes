@@ -1,6 +1,6 @@
 # New York Times
 
-Advanced sample project using the Moovweb development framework.
+Advanced sample project using the Moovweb development framework. We use the framework to create a mobile version of the New York Times home page. We use our own functions as well as Uranium to achieve this.
 
 ## Basics
 This project works with Moovweb's development framework. To get it running, navigate to the folder in your command line and start the Server with `sudo moov server`.

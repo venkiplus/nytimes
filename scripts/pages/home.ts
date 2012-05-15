@@ -1,12 +1,16 @@
 $("./body") {
+  # Add a class to the body for page-specific styling
   add_class("_home")
 
-  # Hide the items in the body
+  # Hide the children of the body that aren't the _header div
+  # (We assign a style of display: none to the _hide class in our stylesheets.)
+  # This is an example of the extraction technique, which can
+  # be read about here: http://beta.moovweb.com/learn/techniques/extract_content
   $("./*[not(@class='_header')]") {
     add_class("_hide")
   }
   
-  # Move what I'd like to the top of the body
+  # Move items we want to keep on the page to the body, out of the _hide divs
   $(".//div[@id='main']") {
     $("./div[contains(concat(' ', @class, ' '), ' baseLayoutBelowFold ')]") {
       $(".//div[contains(concat(' ', @class, ' '), ' abColumn ')]") {
@@ -29,6 +33,9 @@ $("./body") {
   
     $(".//div[contains(concat(' ', @class, ' '), ' column ')]") {
       # urLateLoad("true")
+
+      # The following snippet takes the title (which used to be a link) and
+      # turns it into an item in the accordion
       $("./h6[@class='moduleHeaderLg']") {
         $("./a") {
           copy_to("ancestor::div[1]/ul", "bottom") {
@@ -50,7 +57,7 @@ $("./body") {
       }
       ur_toggler("./div","./ul")
     }
-  
+    # Implementing the image carousel at the top of the page
     insert_before("div") {
       urCarousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
       $(".//img") {
@@ -66,6 +73,4 @@ $("./body") {
   $("./*[contains(concat(' ', @class, ' '), ' _hide ')]") {
     urLateLoad("false")
   }
-  
-  
 }

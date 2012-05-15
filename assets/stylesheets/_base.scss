@@ -12,11 +12,12 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+// This CSS ensures non-wanted items are not displayed
 ._hide {
   display:none;
 }
 
-
+// Using the mixins defined in _lib.scss
 ._bar2 {
   @include bar2;
 }
@@ -24,6 +25,8 @@ a, a:hover, a:visited {
   @include bar3;
 }
 
+// Essential CSS for the Uranium widgets to work. For more
+// information, see http://uraniumjs.com
 
 // Accordion
 [data-ur-tabs-component="content"] {
@@ -79,7 +82,7 @@ a[data-ur-carousel-component="item"] {
   }
 }
 
-// Sprite
+// Sprites
 .icons-light_gray_r {
   @include sprite_offset(light_gray_r, 100%);
 }
@@ -97,7 +100,7 @@ a[data-ur-carousel-component="item"] {
 
 
 // Test class for identifying selections
-.mw_testing {
+._testing {
   border: 4px solid purple !important;
   background: #555;
   overflow: hidden;
