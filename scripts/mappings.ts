@@ -8,7 +8,7 @@ match($status) {
     @import sections/header.ts
     
     match($path) {
-      # Home Page
+      # Importing Tritium for the Home Page
       with(/^\/$/) {
         log("--> Importing pages/home.ts")
         @import pages/home.ts

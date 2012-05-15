@@ -1,16 +1,16 @@
 $("./body") {
-  add_class("mw_home")
+  add_class("_home")
 
   # Hide the items in the body
-  $("./*[not(@class='mw_header')]") {
-    add_class("mw_hide")
+  $("./*[not(@class='_header')]") {
+    add_class("_hide")
   }
   
   # Move what I'd like to the top of the body
   $(".//div[@id='main']") {
     $("./div[contains(concat(' ', @class, ' '), ' baseLayoutBelowFold ')]") {
       $(".//div[contains(concat(' ', @class, ' '), ' abColumn ')]") {
-        move_to("/html/body/div[@class='mw_header']", "after")
+        move_to("/html/body/div[@class='_header']", "after")
       }
     }
   }
@@ -40,12 +40,12 @@ $("./body") {
           }
           name("div")
         }
-        add_class("mw_bar2")
+        add_class("_bar2")
         name("div")
       }
       $("./ul") {
         $("./li") {
-          add_class("mw_bar3")
+          add_class("_bar3")
         }
       }
       ur_toggler("./div","./ul")
@@ -63,7 +63,7 @@ $("./body") {
     }
   
   }
-  $("./*[contains(concat(' ', @class, ' '), ' mw_hide ')]") {
+  $("./*[contains(concat(' ', @class, ' '), ' _hide ')]") {
     urLateLoad("false")
   }
   

@@ -1,5 +1,9 @@
+# New York Times
+
+Advanced sample project using the Moovweb development framework.
+
 ## Basics
-This project works with Moovweb's development framework. To get it running, navigate to the folder in your terminal and start the Server with `sudo moov server`.
+This project works with Moovweb's development framework. To get it running, navigate to the folder in your command line and start the Server with `sudo moov server`.
 
 See detailed docs at http://beta.moovweb.com
 

@@ -12,20 +12,20 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
-.mw_hide {
+._hide {
   display:none;
 }
 
 
-.mw_bar2 {
+._bar2 {
   @include bar2;
 }
-.mw_bar3 {
+._bar3 {
   @include bar3;
 }
 
 
-//accordian
+// Accordion
 [data-ur-tabs-component="content"] {
   display: none;
   &[data-ur-state="enabled"] {
