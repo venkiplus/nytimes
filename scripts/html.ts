@@ -5,7 +5,9 @@ $("/html") {
   # to every page with some pre-defined functions, found in the functions
   # folder of the project
 
-  absolutize()  # don't proxy img and other assets
+  absolutize(".//img|.//script", "src")  # don't proxy img and script assets
+
+  rewrite_links()                        # proxy all other pages 
 
   remove_all_styles()
     
@@ -14,8 +16,6 @@ $("/html") {
   meta_tags()
   
   add_assets()
-  
-  rewrite_links()
   
   @import mappings.ts
   

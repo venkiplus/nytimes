@@ -85,8 +85,12 @@
 }
 
 # Absolutize Items 
-@func XMLNode.absolutize() {
-  # Absolutize IMG and SCRIPT SRCs
+# Requires some global variable - $path, $source_host - to be set correctly
+# Usage: absolutize(".//img|.//script", "src")
+@func XMLNode.absolutize(Text %xpath, Text %attr) {
+
+  log("---> Absolutizing all ", %xpath, " @", %attr, " to ", $source_host)
+
   var("slash_path") {
     # the 'slash_path' is the path of this page without anything following it's last slash
     set($path)
@@ -94,13 +98,14 @@
     # turn empty string into a single slash because this is the only thing separating the host from the path relative path
     replace(/^$/, "/")
   }
-  $(".//img|.//script") {
-    var("src", fetch("./@src"))
+  
+  $(%xpath) {
+    var("url", fetch(concat("./@", %attr)))
     # skip URLs which: are empty, have a host (//www.example.com), or have a protocol (http:// or mailto:)
-    match($src, /^(?![a-z]+\:)(?!\/\/)(?!$)/) {
-      attribute("src") {
+    match($url, /^(?![a-z]+\:)(?!\/\/)(?!$)/) {
+      attribute(%attr) {
         value() {
-          match($src) {
+          match($url) {
             with(/^\//) {
               # host-relative URL: just add the host
               prepend(concat("//", $source_host))
@@ -115,6 +120,7 @@
     }
   }
 }
+
 
 @func XMLNode.relocate_scripts() {
   $("/html/body/script") {
