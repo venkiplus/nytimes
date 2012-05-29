@@ -7,15 +7,15 @@ $("/html") {
 
   absolutize()  # don't proxy img and other assets
 
-  removeAllStyles()
+  remove_all_styles()
     
-  removeScripts()
+  remove_scripts()
 
-  metaTags()
+  meta_tags()
   
-  addAssets()
+  add_assets()
   
-  rewrite()
+  rewrite_links()
   
   @import mappings.ts
   

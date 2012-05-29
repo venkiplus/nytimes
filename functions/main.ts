@@ -4,41 +4,41 @@
 ####################
 
 # Remove Styles Functions
-@func XMLNode.removeExternalStyles() {
+@func XMLNode.remove_external_styles() {
   $(".//link[@rel='stylesheet']") {
     remove()
   }
 }
-@func XMLNode.removeInternalStyles() {
+@func XMLNode.remove_internal_styles() {
   $(".//style") {
     remove()
   }
 }
-@func XMLNode.removeAllStyles() {
+@func XMLNode.remove_all_styles() {
   $(".//link[@rel='stylesheet']|.//style") {
     remove()
   }
 }
 
 # Remove Scripts
-@func XMLNode.removeExternalScripts() {
+@func XMLNode.remove_external_scripts() {
   $(".//script[@src]") {
     remove()
   }
 }
-@func XMLNode.removeInternalScripts() {
+@func XMLNode.remove_internal_scripts() {
   $(".//script[not(@src)]") {
     remove()
   }
 }
-@func XMLNode.removeScripts() {
+@func XMLNode.remove_scripts() {
   $(".//script") {
     remove()
   }
 }
 
 # Clean Meta Tags
-@func XMLNode.metaTags() {
+@func XMLNode.meta_tags() {
   # Remove only existing meta tags for which we will add our own
   $(".//meta[@name='viewport']|.//meta[@name='format-detection']") {
     remove()
@@ -53,7 +53,7 @@
 }
 
 # Add in our Assets
-@func XMLNode.addAssets() {
+@func XMLNode.add_assets() {
   $("./head") {
     insert("link", rel: "stylesheet", type: "text/css", href: sass($device_stylesheet))
     insert("script", data-mw_keep: "true", type: "text/javascript", src: asset("javascript/main.js"))
@@ -63,7 +63,7 @@
 }
 
 # Rewrite items
-@func XMLNode.rewrite() {
+@func XMLNode.rewrite_links() {
   $("./body") {
     # Rewrite links
     $(".//a") {
@@ -116,7 +116,7 @@
   }
 }
 
-@func XMLNode.relocateScripts() {
+@func XMLNode.relocate_scripts() {
   $("/html/body/script") {
     move_to("/html/body", "bottom")
   }
