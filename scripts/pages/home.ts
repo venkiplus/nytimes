@@ -59,7 +59,7 @@ $("./body") {
     }
     # Implementing the image carousel at the top of the page
     insert_before("div") {
-      urCarousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
+      ur_carousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
       $(".//img") {
         attribute("src") {
           value() {
@@ -71,6 +71,6 @@ $("./body") {
   
   }
   $("./*[contains(concat(' ', @class, ' '), ' _hide ')]") {
-    urLateLoad("false")
+    ur_late_load("false")
   }
 }

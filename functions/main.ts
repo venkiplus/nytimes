@@ -152,7 +152,7 @@
 }
 
 
-@func XMLNode.urCarousel(Text %items) {
+@func XMLNode.ur_carousel(Text %items) {
   ur_set("carousel")
   ur_component("carousel", "view_container")
   ur_attribute("autoscroll", "true")
@@ -176,7 +176,7 @@
   }
 }
 
-@func XMLNode.urLateLoad(Text %bool) {
+@func XMLNode.ur_late_load(Text %bool) {
   $(".//img") {
     attribute("data-mw-lateload", %bool)
     attribute("data-src", fetch("./@src"))
