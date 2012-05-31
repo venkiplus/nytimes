@@ -1,1 +1,46 @@
+host:
+  - test: m.nytimes.com
+    expected: www.nytimes.com
+  - test: m.product.nytimes.com
+    expected: product.nytimes.com
+  - test: m.www1.nytimes.com
+    expected: www1.nytimes.com
+  - test: mlocal.nytimes.com
+    expected: www.nytimes.com
+  - test: www.nytimes.friends.moovserve.com
+    expected: www.nytimes.com
+  - test: nytimes.friends.moovserve.com
+    expected: nytimes.com
+  - test: www.nytimes.friends.moovapp.com
+    expected: www.nytimes.com
+link:
+  - host: m.nytimes.com
+    test: www.nytimes.com
+    expected: m.nytimes.com
+  - host: m.nytimes.com
+    test: http://nytimes.com/location?x=y
+    expected: http://m.nytimes.com/location?x=y
+  - host: www.nytimes.friends.moovapp.com
+    test: www.nytimes.com
+    expected: www.nytimes.friends.moovapp.com
+  - host: www.nytimes.friends.moovapp.com
+    test: nytimes.com
+    expected: www.nytimes.friends.moovapp.com
+
+cookie_domain:
+  - host: m.nytimes.com
+    test: .nytimes.com
+    expected: .nytimes.com
+  - host: mlocal.nytimes.com
+    test: .nytimes.com
+    expected: .nytimes.com
+  - host: m.nytimes.com
+    test: www.nytimes.com
+    expected: .nytimes.com
+  - host: m.nytimes.com
+    test: muay.nytimes.com
+    expected: .muay.nytimes.com
+  - host: www.nytimes.friends.moovapp.com
+    test: .thai.nytimes.com
+    expected: .thai.nytimes.friends.moovapp.com
 

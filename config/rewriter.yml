@@ -1,14 +1,18 @@
 rewriter:
   host:
-    - matcher: ^m[a-z]*\.nytimes.com
+    - matcher: ^m[a-z]*\.nytimes\.com
       replacement: www.nytimes.com
-    - matcher: m[a-z]*\.([a-z0-9\-\.]*nytimes.com)
+    - matcher: ^m[a-z]*\.([a-z0-9\-\.]*nytimes\.com)
       replacement: \1
+    - matcher: (.*)nytimes(.*)\.com
+      replacement: $1nytimes.com
   link:
-    host: m(?<prefix>[a-z]*)\.[a-z0-9\-\.]*nytimes.com
-    matcher: (^|\/\/|\"|\')(?!m$prefix\.)(www\.)?([a-z0-9\-\.]*)nytimes.com
-    replacement: \1m$prefix.\3nytimes.com
+    host: (?<prefix>.*)nytimes\.(?<suffix>.*)
+    matcher: (^|\/\/|\"|\')(www\.)?([a-z0-9\-\.]*)nytimes\.com
+    replacement: $1$prefix$3nytimes.$suffix
   cookie_domain:
-    matcher: \.?(www\.)?([a-z0-9\-\.]*nytimes.com)
-    replacement: .\2
+    host: (?<prefix>.*)nytimes\.(?<suffix>.*)
+    matcher: \.?(www\.)?([a-z0-9\-\.]*)nytimes\.com
+    replacement: .$2nytimes.$suffix
+    missing_replacement: .nytimes.$suffix
 
