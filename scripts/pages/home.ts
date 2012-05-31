@@ -60,13 +60,6 @@ $("./body") {
     # Implementing the image carousel at the top of the page
     insert_before("div") {
       ur_carousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
-      $(".//img") {
-        attribute("src") {
-          value() {
-            replace(/thumbStandard/, "popup")
-          }
-        }
-      }
     }
   
   }
