@@ -1,25 +1,3 @@
-lib/*.ts
-.rvmrc
-tmp/
-log/
-*.swp
-.sass-cache
 .DS_Store
-config/default.vcl
-JENKINS
-BUILD_VERSION
-*~
-project.gemspec
-assets/javascript/.remote/
-<<<<<<< HEAD
-assets/javascript/main.js
-assets/javascript/host_map.js
-*.css
-=======
-
-assets/javascript/main.js
-
-*.css
-lib/mlocal.nytimes.com.slug
-icons-*
->>>>>>> a292080452ab08879d9b5254341156eb654b954c
+.remote
+.css
