@@ -20,7 +20,7 @@ body {
 
 a {
   font-size: 13px;
-  color: #F4F4F4;
+  color: #369;
   font-weight: bold;
   text-decoration: none;
   word-wrap: break-word;
@@ -36,4 +36,43 @@ img {
 
 input[type="number"]::-webkit-outer-spin-button {
   display: none;
+}
+
+._hide {
+  display:none;
+}
+
+// Using the mixins defined in _lib.scss
+._bar2 {
+  @include bar2;
+}
+._bar3 {
+  @include bar3;
+}
+
+// Special Styles for the carousel - in addition to the ones
+// found in _uranium.scss
+
+div[data-ur-carousel-component="button"][data-ur-state="disabled"] {
+  opacity: .3;
+}
+div[data-ur-carousel-button-type="prev"] {
+  float:left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+div[data-ur-carousel-button-type="next"] {
+  float:right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+div[data-ur-carousel-component="count"] {
+  text-align:center;
+  clear:both;
+}
+a[data-ur-carousel-component="item"] {
+  img {
+    width:320px;
+    height:214px;
+  }
 }

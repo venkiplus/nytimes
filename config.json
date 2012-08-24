@@ -1,5 +1,6 @@
 {
 	"host_map": [
+	  "$.nytimes.com => www.nytimes.com",
 		"$.nytimes.com => nytimes.com",
 		"$.mobile.nytimes.com => mobile.nytimes.com",
 		"$.video.nytimes.com => video.nytimes.com",

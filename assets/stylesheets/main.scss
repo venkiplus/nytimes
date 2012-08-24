@@ -2,7 +2,11 @@
 // Include them below as needed; e.g.:
 // @import "globals/_icons.scss";
 
+@import "globals/_reset.scss";
+
 // Base file contains all the global styles
+@import "globals/_mixins.scss";
+@import "globals/_lib.scss";
 @import "globals/_base.scss";
 
 
@@ -17,3 +21,7 @@
 
 // Pages
 @import "pages/_home.scss";
+
+// Sprite Stylesheets
+
+//@import "icons.scss";

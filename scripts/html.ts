@@ -7,7 +7,7 @@ $("/html") {
   # Remove all script tags not marked with "data-keep" attribute
   remove_desktop_js();
 
-    # Needed to begin mobilizing
+  # Needed to begin mobilizing
   remove_all_styles()
   remove_html_comments()
   insert_mobile_meta_tags()

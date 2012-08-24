@@ -1,0 +1,93 @@
+// Background Color
+$body_background: white;
+
+// Font size
+$font_size:       12px;
+$h2_size:         15px;
+
+// Font colors
+$text_color:      #000;       // black
+$link_color:      #afadad;    // light gray
+
+
+$border_color1: #c1bfbf;
+$border1:       1px solid $border_color1;
+$border_color3: #999;
+$border3:       1px solid $border_color3;
+
+// Here we define our mixins. For more information on mixins and other
+// features of Sass, check out http://sass-lang.com
+
+// @mixin sprite_offset($sprite, $offset_x, $offset_y: 0) {
+//   background-position: sprite-position($icons-sprites, $sprite, $offset_x, $offset_y);
+// }
+
+// @mixin sprite_right($sprite) {
+//   @extend .icons-#{$sprite};
+//   @include sprite_offset($sprite, 100%);
+// }
+
+//gray bar color
+@mixin grad2 {
+  @include background(linear-gradient(#f7f7f7, #eaeaea 50%, #e0e0e0 51%, #d6d6d6));
+  background-color: #eaeaea; /* Old browsers */
+}
+
+// Bars and Accordions
+@mixin bar_inner_base {
+  display: block;
+  font-size: $h2_size;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  padding: 10px;
+}
+
+// Light gray bar mixin
+@mixin bar2 {
+  @include grad2;
+  border-top: #fff;
+  text-shadow: 0 1px 0 #fff;
+  border-bottom: $border3;
+  color: #444;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 15px;
+  > a {
+    @include bar_inner_base;
+    @extend .icons-gray_r;
+    display: block;
+    padding: 10px;
+    color: #444;
+  }
+
+  &[data-ur-state="disabled"] {
+    > span, > div {
+      @include bar_inner_base;
+      @extend .icons-gray_plus;
+    }
+
+  }
+  &[data-ur-state="enabled"] {
+    @include box-shadow(0px 2px 3px #999);
+    > span, > div {
+      @include bar_inner_base;
+      @extend .icons-gray_minus;
+    }
+
+  }
+}
+
+// White bar mixin
+@mixin bar3 {
+  background: #fff;
+  border-bottom: $border1;
+  > h6 > a {
+    @include bar_inner_base;
+    @extend .icons-light_gray_r;
+    display: block;
+    padding: 10px 20px 10px 10px;
+    font-weight: normal;
+    color: #333;
+  }
+}

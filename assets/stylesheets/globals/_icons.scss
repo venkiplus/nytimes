@@ -1,43 +1,72 @@
-/*  #######################################
-    ########### SPRITED ICONS #############
-    #######################################  */
+$icons-url: url("http://localhost:3003/images/icons.png");
 
-// Set the spacing to be 10px apart (remove for no spacing)
-$icons-spacing: 10px;
+$icons-width: 71px;
+$icons-height: 144px;
 
-// Change the location of an icon in your sprite
-// Format is $foldername-iconname-position (example below)
-// $icons-plus-position: 100%;
+$icons-gray_minus-x: 0px;
+$icons-gray_minus-y: 0px;
+$icons-gray_minus-width: 71px;
+$icons-gray_minus-height: 36px;
 
-// https://gist.github.com/gists/2879137
-// this is for Compass 0.12 (require)
-// this is for at least Manhattan v.3.4.136
+$icons-gray_plus-x: 0px;
+$icons-gray_plus-y: -36px;
+$icons-gray_plus-width: 71px;
+$icons-gray_plus-height: 36px;
 
-// @import "icons/*.png";
-// @include all-icons-sprites;
- 
-// @import "retina";
-// if all the images in your icons/ folder are retina size:
-// @include retina-sprites(-sprites);
- 
-// if only some of the images are retina size and they have a filename convention ex. x2-a.png, x2-b.png, x2-c.png
-// @include retina-sprites(-sprites, sprite-names(sprite-map("icons/x2-*.png")));
- 
-// otherwise you can manually list each retina image
-// @include retina-sprites(-sprites, a b c);
- 
-// Example equivalent of making background-position-x: 100%;
-// .icons-x2-accordion-arrow {
-//   @include retina-background-position(-sprites, x2-accordion-arrow, 100%);
-// }
+$icons-gray_r-x: 0px;
+$icons-gray_r-y: -72px;
+$icons-gray_r-width: 71px;
+$icons-gray_r-height: 36px;
 
-// Define all heights and widths of sprite icons below
-// Sprite class is the name of the <sprite folder>-<icon name>
-// ie. sprite/foo.png will result in .sprite-foo
+$icons-light_gray_r-x: 0px;
+$icons-light_gray_r-y: -108px;
+$icons-light_gray_r-width: 71px;
+$icons-light_gray_r-height: 36px;
 
-// Example
-// .icons-plus, .icons-minus {
-//   width: 19px;
-//   height: 19px;
-//   display: inline-block;
-// }
+@mixin icons-gray_minus() {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px 0px;
+  width: 71px;
+  height: 36px;
+}
+
+@mixin icons-gray_plus() {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -36px;
+  width: 71px;
+  height: 36px;
+}
+
+@mixin icons-gray_r() {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -72px;
+  width: 71px;
+  height: 36px;
+}
+
+@mixin icons-light_gray_r() {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -108px;
+  width: 71px;
+  height: 36px;
+}
+
+.icons-gray_minus {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px 0px;
+  width: 71px;
+  height: 36px;
+}
+
+.icons-gray_plus {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -36px;
+  width: 71px;
+  height: 36px;
+}
+
+.icons-gray_r {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -72px;
+  width: 71px;
+  height: 36px;
+}
+
+.icons-light_gray_r {
+  background: url("http://localhost:3003/images/icons.png") no-repeat 0px -108px;
+  width: 71px;
+  height: 36px;
+}
