@@ -1,0 +1,55 @@
+$sprites-url: url("http://localhost:3003/images/sprites.png");
+
+$sprites-width: 16px;
+$sprites-height: 41px;
+
+$sprites-gray_minus-x: 0px;
+$sprites-gray_minus-y: 0px;
+$sprites-gray_minus-width: 16px;
+$sprites-gray_minus-height: 13px;
+
+$sprites-gray_plus-x: 0px;
+$sprites-gray_plus-y: -13px;
+$sprites-gray_plus-width: 16px;
+$sprites-gray_plus-height: 15px;
+
+$sprites-light_gray_r-x: 0px;
+$sprites-light_gray_r-y: -28px;
+$sprites-light_gray_r-width: 13px;
+$sprites-light_gray_r-height: 13px;
+
+@mixin sprites-gray_minus() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px 0px;
+  width: 16px;
+  height: 13px;
+}
+
+@mixin sprites-gray_plus() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -13px;
+  width: 16px;
+  height: 15px;
+}
+
+@mixin sprites-light_gray_r() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -28px;
+  width: 13px;
+  height: 13px;
+}
+
+.sprites-gray_minus {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px 0px;
+  width: 16px;
+  height: 13px;
+}
+
+.sprites-gray_plus {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -13px;
+  width: 16px;
+  height: 15px;
+}
+
+.sprites-light_gray_r {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -28px;
+  width: 13px;
+  height: 13px;
+}

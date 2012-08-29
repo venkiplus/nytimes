@@ -55,24 +55,31 @@ $border3:       1px solid $border_color3;
   font-size: 15px;
   > a {
     @include bar_inner_base;
-    @extend .icons-gray_r;
     display: block;
     padding: 10px;
     color: #444;
   }
 
   &[data-ur-state="disabled"] {
-    > span, > div {
-      @include bar_inner_base;
-      @extend .icons-gray_plus;
+    @include bar_inner_base;
+    > div {
+      display: inline;
+    }
+    > .icon {
+      float: right;
+      @include sprites-gray_plus;
     }
 
   }
   &[data-ur-state="enabled"] {
     @include box-shadow(0px 2px 3px #999);
-    > span, > div {
-      @include bar_inner_base;
-      @extend .icons-gray_minus;
+    @include bar_inner_base;
+    > div {
+      display: inline;
+    }
+    > .icon {
+      float: right;
+      @include sprites-gray_minus;
     }
 
   }
@@ -82,12 +89,16 @@ $border3:       1px solid $border_color3;
 @mixin bar3 {
   background: #fff;
   border-bottom: $border1;
-  > h6 > a {
-    @include bar_inner_base;
-    @extend .icons-light_gray_r;
-    display: block;
-    padding: 10px 20px 10px 10px;
-    font-weight: normal;
-    color: #333;
+  > h6 {
+    display: inline;
+    > a {
+      @include bar_inner_base;
+      font-weight: normal;
+      color: #333;
+    }
+  }
+  > .icon {
+    float: right;
+    @include sprites-light_gray_r;
   }
 }

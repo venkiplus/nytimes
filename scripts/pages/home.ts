@@ -49,10 +49,12 @@ $("./body") {
         }
         add_class("_bar2")
         name("div")
+        insert("div", class: "icon")
       }
       $("./ul") {
         $("./li") {
           add_class("_bar3")
+          insert("div", class: "icon")
         }
       }
       ur_toggler("./div","./ul")
