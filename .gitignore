@@ -1,3 +1,5 @@
 .DS_Store
 .remote
 .css
+tmp/
+assets/javascript/host_map.js
