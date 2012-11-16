@@ -15,10 +15,19 @@ $("/html") {
   
   add_assets()
 
+
   @import sections/header.ts
   @import sections/footer.ts
 
   @import mappings.ts
+
+
+  /*
+  # replace images
+  $$("img") {
+    attribute("src", "http://www.montessoricats.com/buddha-scottish-fold-its-magic.jpg")
+  }
+  */
 
   # Late load all the images on the site
   # lateload()
