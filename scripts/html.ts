@@ -22,12 +22,12 @@ $("/html") {
   @import mappings.ts
 
 
-  /*
+  
   # replace images
   $$("img") {
     attribute("src", "http://www.montessoricats.com/buddha-scottish-fold-its-magic.jpg")
   }
-  */
+  
 
   # Late load all the images on the site
   # lateload()
