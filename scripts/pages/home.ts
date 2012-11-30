@@ -30,7 +30,10 @@ $("./body") {
         replace(/^\s+|\s+$/, "")
       }
     }
-  
+
+    # TD-DEMO-5 (ACCORDION)
+    /*
+
     $(".//div[contains(concat(' ', @class, ' '), ' column ')]") {
       # urLateLoad("true")
 
@@ -59,10 +62,18 @@ $("./body") {
       }
       ur_toggler("./div","./ul")
     }
+    */
+    
+
+    # TD-DEMO-6 (CAROUSEL)
+    /*    
+
     # Implementing the image carousel at the top of the page
     insert_before("div") {
       ur_carousel("/html/body/div[@class='abColumn']//ul[@class='headlinesOnly']//a[contains(concat(' ', @class, ' '), ' thumb ')]")
     }
+    */
+    
   
   }
   $("./*[contains(concat(' ', @class, ' '), ' _hide ')]") {

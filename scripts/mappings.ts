@@ -17,8 +17,12 @@ match($status) {
   with(/200/) {
     log("--> STATUS: 200")
 
+
+    # TD-DEMO-4 (MAPPINGS)
+    /*
+
     match($path) {
-      with(/^\/$|^\/\?/) {
+      with(/\/$/) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
@@ -26,6 +30,8 @@ match($status) {
         log("--> No page match in mappings.ts")
       }
     }
+    */
+    
   }
 
   else() {
