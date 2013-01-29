@@ -5,12 +5,12 @@ $("/html") {
   absolutize_srcs()
 
   # TD-DEMO-1 (CATS!)
-  
+  /*
   # replace images
   $$("img") {
     attribute("src", "http://www.montessoricats.com/buddha-scottish-fold-its-magic.jpg")
   }
-  
+  */
   
   # TD-DEMO-2 (STRIP OUT DESKTOP STYLES)
   
