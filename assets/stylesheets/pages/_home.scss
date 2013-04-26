@@ -1,5 +1,22 @@
 // Every page should have a class on the body
 // Scope that in each file at the start
 ._home {
-  
+  ._hide {
+    display:none;
+  }
+  ul.headlinesOnly {
+    li {
+      overflow:hidden;
+      &.firstItem {
+        > a {
+          padding:10px;
+          float:left;
+          img {
+            height:50px;
+            width:50px;
+          }
+        }
+      }
+    }
+  }
 }
