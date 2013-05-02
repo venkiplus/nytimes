@@ -14,5 +14,14 @@ $("/html") {
   @import sections/footer.ts
 
   @import mappings.ts
+
+  # Sample code for the Tritium tester 
+  # sandbox area
+
+  # $$("#day") {
+  #   inner("Friday, 13 October, 2020")
+  # }
+
+  # remove("/html/body/div[@data-ur-set='carousel']")
 }
 
