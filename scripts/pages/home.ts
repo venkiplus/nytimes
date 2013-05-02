@@ -1,7 +1,6 @@
 $("./body") {
   # Add a class to the body for page-specific styling
   add_class("_home")
-
   # Move items we want to keep on the page to the body, out of the _hide divs
   $(".//div[@id='main']") {
     $("./div[contains(@class, 'baseLayoutBelowFold')]") {

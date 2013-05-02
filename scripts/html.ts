@@ -23,5 +23,6 @@ $("/html") {
   # }
 
   # remove("/html/body/div[@data-ur-set='carousel']")
+
 }
 

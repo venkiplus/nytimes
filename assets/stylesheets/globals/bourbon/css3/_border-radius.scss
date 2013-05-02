@@ -1,21 +1,42 @@
 @mixin border-radius ($radii) {
   @include prefixer(border-radius, $radii, webkit, not moz);
+<<<<<<< HEAD
+=======
+  @warn "border-radius mixin is deprecated and will be removed in the next major version release.";
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 @mixin border-top-left-radius($radii) {
   @include prefixer(border-top-left-radius, $radii, webkit, not moz);
+<<<<<<< HEAD
+=======
+  @warn "border-top-left-radius mixin is deprecated and will be removed in the next major version release.";
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 @mixin border-top-right-radius($radii) {
   @include prefixer(border-top-right-radius, $radii, webkit, not moz);
+<<<<<<< HEAD
 }
 
 @mixin border-bottom-left-radius($radii) {
   @include prefixer(border-bottom-left-radius, $radii, webkit, not moz); 
+=======
+  @warn "border-top-right-radius mixin is deprecated and will be removed in the next major version release.";
+}
+
+@mixin border-bottom-left-radius($radii) {
+  @include prefixer(border-bottom-left-radius, $radii, webkit, not moz);
+  @warn "border-bottom-left-radius mixin is deprecated and will be removed in the next major version release.";
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 @mixin border-bottom-right-radius($radii) {
   @include prefixer(border-bottom-right-radius, $radii, webkit, not moz);
+<<<<<<< HEAD
+=======
+  @warn "border-bottom-right-radius mixin is deprecated and will be removed in the next major version release.";
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 @mixin border-top-radius($radii) {

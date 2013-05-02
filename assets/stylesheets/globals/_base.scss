@@ -1,5 +1,4 @@
 // Site-wide styles go here
-
 @import "bourbon/_bourbon";
 
 
@@ -64,6 +63,7 @@ div[data-ur-carousel-component="scroll_container"] > * {
   display:inline-block;
   float:left;
 }
+
 div[data-ur-carousel-component="button"][data-ur-state="disabled"] {
   opacity: .3;
 }
@@ -92,5 +92,3 @@ a[data-ur-carousel-component="item"] {
     height:214px;
   }
 }
-
-

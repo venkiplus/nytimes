@@ -75,13 +75,21 @@
 
 # Remove Styles Functions
 @func XMLNode.remove_external_styles() {
+<<<<<<< HEAD
   remove(".//link[@rel='stylesheet'][not(@data-mw-keep)]")
+=======
+  remove(".//link[@rel='stylesheet']")
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 @func XMLNode.remove_internal_styles() {
   remove(".//style")
 }
 @func XMLNode.remove_all_styles() {
+<<<<<<< HEAD
   remove(".//link[@rel='stylesheet'][not(@data-mw-keep)]|.//style")
+=======
+  remove(".//link[@rel='stylesheet']|.//style")
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 # Remove Scripts
@@ -103,6 +111,7 @@
   remove(".//comment()")
 }
 
+<<<<<<< HEAD
 # Remove existing conflicting meta tags
 @func XMLNode.remove_meta_tags() {
   # Remove only existing meta tags for which we will add our own
@@ -111,16 +120,28 @@
 
 # Add Meta Tags
 @func XMLNode.insert_mobile_meta_tags() {
+=======
+# Clean Meta Tags
+@func XMLNode.insert_mobile_meta_tags() {
+  # Remove only existing meta tags for which we will add our own
+  remove(".//meta[@name='viewport']|.//meta[@name='format-detection']")
+
+  # Add our meta tags
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
   $("/html/head") {
     insert("meta", http-equiv: "Content-Type", content: "text/html")
     insert("meta", name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
     insert("meta", name: "format-detection", content: "telephone=no")
+<<<<<<< HEAD
   }
 }
 
 # Add Canonical Tag
 @func XMLNode.add_canonical_tag() {
   $("/html/head") {
+=======
+
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
     # Inject a canonical link as long as there isn't already one. 
     $canonical_found = "false"
     $(".//link[@rel='canonical']") {
@@ -134,6 +155,7 @@
   }
 }
 
+<<<<<<< HEAD
 # Clean Meta Tags
 @func XMLNode.clean_mobile_meta_tags() {
   remove_meta_tags()
@@ -151,6 +173,14 @@
 # Add home screen icons
 @func XMLNode.add_apple_touch_icons() {
   $("/html/head") {
+=======
+# Add in our Assets
+@func XMLNode.add_assets() {
+  $("./head") {
+    insert("link", rel: "stylesheet", type: "text/css", href: sass($device_stylesheet))
+    insert("script", data-keep: "true", type: "text/javascript", src: asset("javascript/main.js"))
+    insert("link", rel: "shortcut icon", href: asset("images/favicon.ico"))
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
     # The images below are placeholders, get real ones from the client
     # Change to -precomposed to not have the glass effect on the icons
     insert("link", rel: "apple-touch-icon", href: asset("images/apple-touch-icon-57x57.png"))
@@ -158,6 +188,7 @@
   }
 }
 
+<<<<<<< HEAD
 # Add the generated stylesheet
 @func XMLNode.add_mobile_stylesheet() {
   $("/html/head") {
@@ -218,12 +249,29 @@
 # Rewrite items
 @func XMLNode.rewrite_links() {
   $rewriter_url = "false"
+=======
+# Rewrite items
+@func XMLNode.rewrite_links() {
+  $rewriter_url = "false"
+  $("./head") {
+    # Add AJAX rewrite config to rewrite items via JS (need passthrough_ajax.js)
+    insert("meta") {
+      attribute("id", "mw_link_passthrough_config")
+      attribute("rewrite_link_matcher", $rewrite_link_matcher)
+      attribute("rewrite_link_replacement", $rewrite_link_replacement)
+    }
+  }
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
   $("./body") {
     # Rewrite links
     $(".//a") {
       attribute("href") {
         value() {
+<<<<<<< HEAD
           rewrite_link()
+=======
+          rewrite("link")
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
@@ -234,7 +282,11 @@
       }
       attribute("href") {
         value() {
+<<<<<<< HEAD
           rewrite_link()
+=======
+          rewrite("link")
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
@@ -242,12 +294,19 @@
     $(".//form") {
       attribute("action") {
         value() {
+<<<<<<< HEAD
           rewrite_link()
+=======
+          rewrite("link")
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
   }
+<<<<<<< HEAD
   rewrite_meta_refresh()
+=======
+>>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 # Absolutize Items 
