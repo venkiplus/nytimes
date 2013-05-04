@@ -1,6 +1,7 @@
 # HTML Transformations go here
 
 $("/html") {
+
   rewrite_links()
   absolutize_srcs()
 
@@ -15,14 +16,8 @@ $("/html") {
 
   @import mappings.ts
 
-  # Sample code for the Tritium tester 
-  # sandbox area
-
-  # $$("#day") {
-  #   inner("Friday, 13 October, 2020")
-  # }
-
-  # remove("/html/body/div[@data-ur-set='carousel']")
+  # remove a frame-busting JS file
+  remove("//script[contains(@src, 'sitewide.js')]") 
 
 }
 
