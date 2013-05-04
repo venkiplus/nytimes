@@ -3,7 +3,7 @@
 ####################
 
 # BTN DELEGATE
-# 
+#
 # EXAMPLE CSS
 # .mw_hide2 {
 #   visibility: hidden!important;
@@ -46,7 +46,7 @@
 #
 #
 # EXAMPLE::
-# 
+#
 # table_dump(".//table") {
 #   $("./div[class='some_class']") {
 #     add_class("mw_more_scopes")
@@ -54,42 +54,59 @@
 # }
 #
 #
-@func XMLNode.table_dump(Text %xpath){
-  $(%xpath) {
-    name("div")
+@func XMLNode.table_dump(){
+  # $(%xpath) {
+  #   name("div")
     add_class("mw_was_table")
 
     $(".//table | .//tr | .//td | .//th | .//thead | .//tfoot | .//tbody | .//col | .//colgroup | .//caption") {
-      %i = index()
-      %n = name()
+      # %i = index()
+      # %n = name()
       name("div")
-      attributes(data-mw-id: concat("mw_dump_", %n, %i), width: "")
-      add_class(concat("mw_was_", %n))
+      # attributes(data-mw-id: concat("mw_dump_", %n, %i), width: "")
+      # add_class(concat("mw_was_", %n))
     }
 
-    yield()
-  }
+  #   yield()
+  # }
 }
+
+# Clean up tables
+# Removes nodes inside tables that have nothing in them
+# and were being used to space items
 
 
 
 # Remove Styles Functions
 @func XMLNode.remove_external_styles() {
-<<<<<<< HEAD
   remove(".//link[@rel='stylesheet'][not(@data-mw-keep)]")
-=======
-  remove(".//link[@rel='stylesheet']")
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 @func XMLNode.remove_internal_styles() {
   remove(".//style")
 }
+@func XMLNode.remove_inline_styles() {
+  $(".//*[not(contains(@style, 'display:none'))]") {
+    %style = fetch("@style")
+    match(%style) {
+      with(/color\:\s*red/i) {
+        add_class("alert alert-error")
+        add_class("mw_error")
+      }
+    }
+  }
+  remove(".//*[not(contains(@style, 'display:none'))]/@style")
+  $(".//*") {
+    remove("@width")
+    remove("@height")
+    remove("@cellpadding")
+    remove("@cellspacing")
+    remove("@border")
+    remove("@valign")
+    remove("@align")
+  }
+}
 @func XMLNode.remove_all_styles() {
-<<<<<<< HEAD
   remove(".//link[@rel='stylesheet'][not(@data-mw-keep)]|.//style")
-=======
-  remove(".//link[@rel='stylesheet']|.//style")
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
 # Remove Scripts
@@ -111,7 +128,6 @@
   remove(".//comment()")
 }
 
-<<<<<<< HEAD
 # Remove existing conflicting meta tags
 @func XMLNode.remove_meta_tags() {
   # Remove only existing meta tags for which we will add our own
@@ -120,29 +136,17 @@
 
 # Add Meta Tags
 @func XMLNode.insert_mobile_meta_tags() {
-=======
-# Clean Meta Tags
-@func XMLNode.insert_mobile_meta_tags() {
-  # Remove only existing meta tags for which we will add our own
-  remove(".//meta[@name='viewport']|.//meta[@name='format-detection']")
-
-  # Add our meta tags
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
   $("/html/head") {
     insert("meta", http-equiv: "Content-Type", content: "text/html")
     insert("meta", name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
     insert("meta", name: "format-detection", content: "telephone=no")
-<<<<<<< HEAD
   }
 }
 
 # Add Canonical Tag
 @func XMLNode.add_canonical_tag() {
   $("/html/head") {
-=======
-
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
-    # Inject a canonical link as long as there isn't already one. 
+    # Inject a canonical link as long as there isn't already one.
     $canonical_found = "false"
     $(".//link[@rel='canonical']") {
       $canonical_found = "true"
@@ -155,7 +159,6 @@
   }
 }
 
-<<<<<<< HEAD
 # Clean Meta Tags
 @func XMLNode.clean_mobile_meta_tags() {
   remove_meta_tags()
@@ -173,14 +176,6 @@
 # Add home screen icons
 @func XMLNode.add_apple_touch_icons() {
   $("/html/head") {
-=======
-# Add in our Assets
-@func XMLNode.add_assets() {
-  $("./head") {
-    insert("link", rel: "stylesheet", type: "text/css", href: sass($device_stylesheet))
-    insert("script", data-keep: "true", type: "text/javascript", src: asset("javascript/main.js"))
-    insert("link", rel: "shortcut icon", href: asset("images/favicon.ico"))
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
     # The images below are placeholders, get real ones from the client
     # Change to -precomposed to not have the glass effect on the icons
     insert("link", rel: "apple-touch-icon", href: asset("images/apple-touch-icon-57x57.png"))
@@ -188,15 +183,14 @@
   }
 }
 
-<<<<<<< HEAD
 # Add the generated stylesheet
 @func XMLNode.add_mobile_stylesheet() {
   $("/html/head") {
     insert("link", rel: "stylesheet", type: "text/css", href: sass($device_stylesheet), data-mw-keep: "true")
-  }  
+  }
 }
 
-# Add the mobile javascript 
+# Add the mobile javascript
 # Using the variable-setting logic as relying solely on presence of script tags
 # is dangerous when removing js or simply on sites with no js.
 @func XMLNode.add_mobile_javascript() {
@@ -204,7 +198,7 @@
     $noscript="true"
     $("./script[1]") {
       $noscript="false"
-      insert_before("script", data-keep: "true", type: "text/javascript", src: asset("javascript/main.js")) 
+      insert_before("script", data-keep: "true", type: "text/javascript", src: asset("javascript/main.js"))
     }
     match($noscript) {
       with("true") {
@@ -222,56 +216,15 @@
   add_mobile_javascript()
 }
 
-# Rewrite meta redirects
-@func XMLNode.rewrite_meta_refresh() {
-  $("/html/head/meta") {
-    %refresh_tag = fetch("@http-equiv")
-    match(normalize(%refresh_tag)) {
-      with(/refresh/i) {
-        attribute("content") {
-          value() {
-            replace(/(.*?;)(URL=)?(.*)/i) {
-              %timeout = $1
-              %prefix = $2
-              %url = $3
-              %url {
-                rewrite_link()
-              }
-              set(%timeout + %prefix + %url)
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 # Rewrite items
 @func XMLNode.rewrite_links() {
   $rewriter_url = "false"
-=======
-# Rewrite items
-@func XMLNode.rewrite_links() {
-  $rewriter_url = "false"
-  $("./head") {
-    # Add AJAX rewrite config to rewrite items via JS (need passthrough_ajax.js)
-    insert("meta") {
-      attribute("id", "mw_link_passthrough_config")
-      attribute("rewrite_link_matcher", $rewrite_link_matcher)
-      attribute("rewrite_link_replacement", $rewrite_link_replacement)
-    }
-  }
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
   $("./body") {
     # Rewrite links
     $(".//a") {
       attribute("href") {
         value() {
-<<<<<<< HEAD
           rewrite_link()
-=======
-          rewrite("link")
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
@@ -282,11 +235,7 @@
       }
       attribute("href") {
         value() {
-<<<<<<< HEAD
           rewrite_link()
-=======
-          rewrite("link")
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
@@ -294,22 +243,14 @@
     $(".//form") {
       attribute("action") {
         value() {
-<<<<<<< HEAD
           rewrite_link()
-=======
-          rewrite("link")
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
         }
       }
     }
   }
-<<<<<<< HEAD
-  rewrite_meta_refresh()
-=======
->>>>>>> e10e42e310a5c566eb31ee74aea52171f884c7ab
 }
 
-# Absolutize Items 
+# Absolutize Items
 @func XMLNode.absolutize_srcs() {
   # Absolutize IMG and SCRIPT SRCs
   var("slash_path") {
@@ -346,6 +287,48 @@
               prepend(concat("//", $rewriter_url, $slash_path))
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@func XMLNode.absolutize_bpm_srcs() {
+  # Absolutize IMG and SCRIPT SRCs
+  var("slash_path") {
+    # the 'slash_path' is the path of this page without anything following it's last slash
+    set($path)
+    replace(/[^\/]+$/, "")
+    # turn empty string into a single slash because this is the only thing separating the host from the path relative path
+    replace(/^$/, "/")
+  }
+  # Find images and scripts that link to an external host
+  $(".//img|.//script[@src]") {
+    # GOTCHAS :: Watch out for captcha images, they most likely should
+    # not be absolutized
+    $src = fetch("./@src")
+    # match($rewriter_url) {
+    #   not(/false/) {
+    #     # Do nothing :: Use base tag value
+    #   }
+    #   else() {
+        $rewriter_url = $source_host
+    #   }
+    # }
+    # skip URLs which: are empty, have a host (//www.example.com), or have a protocol (http:// or mailto:)
+    match($src, /^(?![a-z]+\:)(?!\/\/)(?!$)/) {
+      attribute("src") {
+        value() {
+          # match($src) {
+          #   with(/^\//) {
+          #     # host-relative URL: just add the host
+          #     prepend(concat("//", $rewriter_url))
+          #   }
+          #   else() {
+              # path-relative URL: add the host and the path
+              prepend(concat("//", $rewriter_url))
+          #   }
+          # }
         }
       }
     }
