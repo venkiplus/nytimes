@@ -23,7 +23,8 @@ match($status) {
         @import pages/home.ts
       }
       else() {
-        log("--> No page match in mappings.ts")
+        log("--> No page match in mappings.ts, out of scope")
+        @import pages/out_of_scope.ts
       }
     }
   }

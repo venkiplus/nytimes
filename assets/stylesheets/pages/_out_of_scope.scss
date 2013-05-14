@@ -1,0 +1,23 @@
+body[page='mw_out_of_scope_page'] {
+  .out_of_scope {
+    margin: 20px auto;
+    width: 320px;
+    background: $color4;
+    border: $border1;
+    border-radius: 5px;
+    padding: 10px;
+    h2 {
+      color: $color3;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    input {
+      margin: 20px auto;
+      width: 100px;
+      height: 40px;
+      display: block;
+    }
+  }
+}
