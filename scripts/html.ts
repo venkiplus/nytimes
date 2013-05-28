@@ -15,7 +15,8 @@ $("/html") {
   @import sections/footer.ts
 
   @import mappings.ts
-
+  
+  @import tester.ts
   # remove a frame-busting JS file
   remove("//script[contains(@src, 'sitewide.js')]") 
 
