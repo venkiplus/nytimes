@@ -7,7 +7,7 @@ $(".//div[contains(@class, 'abColumn')]") {
     } 
     // Line for the tester below
     $$(".headlinesOnly") {
-     attribute("data-ur-toggler-component", "content")
+     //attribute("data-ur-toggler-component", "content")
     }
   }
 }
