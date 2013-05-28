@@ -50,6 +50,10 @@ h6 {
 }
 
 // Carousel
+
+// Kevin's fix for stopping all the images showing up at once
+[data-ur-set="carousel"]:not([data-ur-id]) a:not(:first-child) img { height: 0 }
+
 div[data-ur-carousel-component='view_container'] {
   width:100%;
   overflow-x: hidden;
