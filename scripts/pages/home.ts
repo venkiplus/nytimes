@@ -38,7 +38,18 @@ $("./body") {
          insert("span", class: "arrow")
        }
      }
-      ur_toggler("./div","./ul")
+     // CHANGE FROM DEMO BRANCH; SEPARATING OUT
+     // THE TOGGLER SO WE CAN ADD IT IN ON THE
+     // TESTER
+     attribute("data-ur-set", "toggler")
+     $("./div") {
+      attribute("data-ur-toggler-component", "button")
+     }
+     // Line for the tester below
+     $$(".headlinesOnly") {
+      //attribute("data-ur-toggler-component", "content")
+     }
+      //ur_toggler("./div","./ul")
     }
     # Implementing the image carousel at the top of the page
     insert_before("div", class: "_keep") {      
