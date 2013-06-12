@@ -2,7 +2,7 @@
 
 Welcome to your Moovweb project! Moovweb is a great way to build a compelling front-end for a website. The files in this project describe the changes we want to make to the front end of a site. There's places in this project to add new images (assets/images/), styles (assets/stylesheets/) and even manipulate HTML (scripts/).
 
-This is a sample project, so you will find the code commented to help you follow what is happening. 
+This is a sample project, so you will find the code commented to help you follow what is happening. It is a fairly complex example, and therefore suitable for an intermediate/advanced user of Moovweb. For a simpler project, try the [Moovweb blog project](http://github.com/moovweb-demos/moovweb-blog).
 
 ## Before Running This
 
