@@ -2,6 +2,8 @@
 
 Welcome to your Moovweb project! Moovweb is a great way to build a compelling front-end for a website. The files in this project describe the changes we want to make to the front end of a site. There's places in this project to add new images (assets/images/), styles (assets/stylesheets/) and even manipulate HTML (scripts/).
 
+This is a sample project, so you will find the code commented to help you follow what is happening. 
+
 ## Before Running This
 
 To run this project, you must have the Moovweb SDK installed on your system. Installation is easy - just go to [the download page on the Moovweb site](http://console.moovweb.com/download) to download and install.
@@ -30,8 +32,8 @@ Moovweb uses a git-based deployment system. To deploy, just type
 See detailed documentation for Moovweb at [console.moovweb.com](http://console.moovweb.com).
 
 ## Domains
-Remember to put all domains you're going to hit in your etc/hosts or to run your server with the `-auto-hosts=true` option.
 
+If you don't run the server with the `--auto-hosts` command, remember to put all domains you're going to hit in your etc/hosts.
 
     127.0.0.1   mlocal.nytimes.com
     127.0.0.1   mlocal.mobile.nytimes.com
