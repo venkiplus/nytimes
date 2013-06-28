@@ -352,3 +352,15 @@
     }
   }
 }
+
+@func Text.inferred_content_type() {
+  $inferred_content_type = $content_type
+  match($x_requested_with, /XMLHttpRequest/) {
+    match($content_type, /html/) {
+      match(this(), /\A\s*(\[.*\]|{.*}|".*"|\d+|true|false)\s*\Z/m) {
+        $inferred_content_type = "application/json"
+      }
+    }
+  }
+  $inferred_content_type
+}
