@@ -1,15 +1,21 @@
+// Bundled with Fusion v0.1
 
+
+
+/*
+ * File: host_map.js
+ */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *  WARNING: Moovweb auto-generated file. Any changes you make here will *
  *  be overwritten.                                                      *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */ 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 (function(){
 
-var mapProxyToOrigin = {"http://mlocal.artsbeat.blogs.nytimes.com":"http://artsbeat.blogs.nytimes.com","http://mlocal.autos.nytimes.com":"http://autos.nytimes.com","http://mlocal.beta620.nytimes.com":"http://beta620.nytimes.com","http://mlocal.bits.blogs.nytimes.com":"http://bits.blogs.nytimes.com","http://mlocal.campaignstops.blogs.nytimes.com":"http://campaignstops.blogs.nytimes.com","http://mlocal.dealbook.nytimes.com":"http://dealbook.nytimes.com","http://mlocal.eedition.nytimes.com":"http://eedition.nytimes.com","http://mlocal.global.nytimes.com":"http://global.nytimes.com","http://mlocal.graphics8.nytimes.com":"http://graphics8.nytimes.com","http://mlocal.homedelivery.nytimes.com":"http://homedelivery.nytimes.com","http://mlocal.jobmarket.nytimes.com":"http://jobmarket.nytimes.com","http://mlocal.krugman.blogs.nytimes.com":"http://krugman.blogs.nytimes.com","http://mlocal.latitude.blogs.nytimes.com":"http://latitude.blogs.nytimes.com","http://mlocal.lens.blogs.nytimes.com":"http://lens.blogs.nytimes.com","http://mlocal.listings.nytimes.com":"http://listings.nytimes.com","http://mlocal.markets.on.nytimes.com":"http://markets.on.nytimes.com","http://mlocal.mediadecoder.blogs.nytimes.com":"http://mediadecoder.blogs.nytimes.com","http://mlocal.mobile.nytimes.com":"http://mobile.nytimes.com","http://mlocal.movies.nytimes.com":"http://movies.nytimes.com","http://mlocal.nytimes.com":"http://www.nytimes.com","http://mlocal.opinionator.blogs.nytimes.com":"http://opinionator.blogs.nytimes.com","http://mlocal.placead.nytimes.com":"http://placead.nytimes.com","http://mlocal.realestate.nytimes.com":"http://realestate.nytimes.com","http://mlocal.realestateads.nytimes.com":"http://realestateads.nytimes.com","http://mlocal.runway.blogs.nytimes.com":"http://runway.blogs.nytimes.com","http://mlocal.select.nytimes.com":"http://select.nytimes.com","http://mlocal.spiderbites.nytimes.com":"http://spiderbites.nytimes.com","http://mlocal.takingnote.blogs.nytimes.com":"http://takingnote.blogs.nytimes.com","http://mlocal.theater.nytimes.com":"http://theater.nytimes.com","http://mlocal.thecaucus.blogs.nytimes.com":"http://thecaucus.blogs.nytimes.com","http://mlocal.thelede.blogs.nytimes.com":"http://thelede.blogs.nytimes.com","http://mlocal.timeslimited.nytimes.com":"http://timeslimited.nytimes.com","http://mlocal.timesmachine.nytimes.com":"http://timesmachine.nytimes.com","http://mlocal.tmagazine.blogs.nytimes.com":"http://tmagazine.blogs.nytimes.com","http://mlocal.travel.nytimes.com":"http://travel.nytimes.com","http://mlocal.tv.nytimes.com":"http://tv.nytimes.com","http://mlocal.up.nytimes.com":"http://up.nytimes.com","http://mlocal.video.nytimes.com":"http://video.nytimes.com","http://mlocal.well.blogs.nytimes.com":"http://well.blogs.nytimes.com","http://mlocal.wt.o.nytimes.com":"http://wt.o.nytimes.com","https://mlocal.artsbeat.blogs.nytimes.com":"https://artsbeat.blogs.nytimes.com","https://mlocal.autos.nytimes.com":"https://autos.nytimes.com","https://mlocal.beta620.nytimes.com":"https://beta620.nytimes.com","https://mlocal.bits.blogs.nytimes.com":"https://bits.blogs.nytimes.com","https://mlocal.campaignstops.blogs.nytimes.com":"https://campaignstops.blogs.nytimes.com","https://mlocal.dealbook.nytimes.com":"https://dealbook.nytimes.com","https://mlocal.eedition.nytimes.com":"https://eedition.nytimes.com","https://mlocal.global.nytimes.com":"https://global.nytimes.com","https://mlocal.graphics8.nytimes.com":"https://graphics8.nytimes.com","https://mlocal.homedelivery.nytimes.com":"https://homedelivery.nytimes.com","https://mlocal.jobmarket.nytimes.com":"https://jobmarket.nytimes.com","https://mlocal.krugman.blogs.nytimes.com":"https://krugman.blogs.nytimes.com","https://mlocal.latitude.blogs.nytimes.com":"https://latitude.blogs.nytimes.com","https://mlocal.lens.blogs.nytimes.com":"https://lens.blogs.nytimes.com","https://mlocal.listings.nytimes.com":"https://listings.nytimes.com","https://mlocal.markets.on.nytimes.com":"https://markets.on.nytimes.com","https://mlocal.mediadecoder.blogs.nytimes.com":"https://mediadecoder.blogs.nytimes.com","https://mlocal.mobile.nytimes.com":"https://mobile.nytimes.com","https://mlocal.movies.nytimes.com":"https://movies.nytimes.com","https://mlocal.nytimes.com":"https://www.nytimes.com","https://mlocal.opinionator.blogs.nytimes.com":"https://opinionator.blogs.nytimes.com","https://mlocal.placead.nytimes.com":"https://placead.nytimes.com","https://mlocal.realestate.nytimes.com":"https://realestate.nytimes.com","https://mlocal.realestateads.nytimes.com":"https://realestateads.nytimes.com","https://mlocal.runway.blogs.nytimes.com":"https://runway.blogs.nytimes.com","https://mlocal.select.nytimes.com":"https://select.nytimes.com","https://mlocal.spiderbites.nytimes.com":"https://spiderbites.nytimes.com","https://mlocal.takingnote.blogs.nytimes.com":"https://takingnote.blogs.nytimes.com","https://mlocal.theater.nytimes.com":"https://theater.nytimes.com","https://mlocal.thecaucus.blogs.nytimes.com":"https://thecaucus.blogs.nytimes.com","https://mlocal.thelede.blogs.nytimes.com":"https://thelede.blogs.nytimes.com","https://mlocal.timeslimited.nytimes.com":"https://timeslimited.nytimes.com","https://mlocal.timesmachine.nytimes.com":"https://timesmachine.nytimes.com","https://mlocal.tmagazine.blogs.nytimes.com":"https://tmagazine.blogs.nytimes.com","https://mlocal.travel.nytimes.com":"https://travel.nytimes.com","https://mlocal.tv.nytimes.com":"https://tv.nytimes.com","https://mlocal.up.nytimes.com":"https://up.nytimes.com","https://mlocal.video.nytimes.com":"https://video.nytimes.com","https://mlocal.well.blogs.nytimes.com":"https://well.blogs.nytimes.com","https://mlocal.wt.o.nytimes.com":"https://wt.o.nytimes.com"};
-var mapOriginToProxy = {"http://artsbeat.blogs.nytimes.com":"http://mlocal.artsbeat.blogs.nytimes.com","http://autos.nytimes.com":"http://mlocal.autos.nytimes.com","http://beta620.nytimes.com":"http://mlocal.beta620.nytimes.com","http://bits.blogs.nytimes.com":"http://mlocal.bits.blogs.nytimes.com","http://campaignstops.blogs.nytimes.com":"http://mlocal.campaignstops.blogs.nytimes.com","http://dealbook.nytimes.com":"http://mlocal.dealbook.nytimes.com","http://eedition.nytimes.com":"http://mlocal.eedition.nytimes.com","http://global.nytimes.com":"http://mlocal.global.nytimes.com","http://graphics8.nytimes.com":"http://mlocal.graphics8.nytimes.com","http://homedelivery.nytimes.com":"http://mlocal.homedelivery.nytimes.com","http://jobmarket.nytimes.com":"http://mlocal.jobmarket.nytimes.com","http://krugman.blogs.nytimes.com":"http://mlocal.krugman.blogs.nytimes.com","http://latitude.blogs.nytimes.com":"http://mlocal.latitude.blogs.nytimes.com","http://lens.blogs.nytimes.com":"http://mlocal.lens.blogs.nytimes.com","http://listings.nytimes.com":"http://mlocal.listings.nytimes.com","http://markets.on.nytimes.com":"http://mlocal.markets.on.nytimes.com","http://mediadecoder.blogs.nytimes.com":"http://mlocal.mediadecoder.blogs.nytimes.com","http://mobile.nytimes.com":"http://mlocal.mobile.nytimes.com","http://movies.nytimes.com":"http://mlocal.movies.nytimes.com","http://nytimes.com":"http://mlocal.nytimes.com","http://opinionator.blogs.nytimes.com":"http://mlocal.opinionator.blogs.nytimes.com","http://placead.nytimes.com":"http://mlocal.placead.nytimes.com","http://realestate.nytimes.com":"http://mlocal.realestate.nytimes.com","http://realestateads.nytimes.com":"http://mlocal.realestateads.nytimes.com","http://runway.blogs.nytimes.com":"http://mlocal.runway.blogs.nytimes.com","http://select.nytimes.com":"http://mlocal.select.nytimes.com","http://spiderbites.nytimes.com":"http://mlocal.spiderbites.nytimes.com","http://takingnote.blogs.nytimes.com":"http://mlocal.takingnote.blogs.nytimes.com","http://theater.nytimes.com":"http://mlocal.theater.nytimes.com","http://thecaucus.blogs.nytimes.com":"http://mlocal.thecaucus.blogs.nytimes.com","http://thelede.blogs.nytimes.com":"http://mlocal.thelede.blogs.nytimes.com","http://timeslimited.nytimes.com":"http://mlocal.timeslimited.nytimes.com","http://timesmachine.nytimes.com":"http://mlocal.timesmachine.nytimes.com","http://tmagazine.blogs.nytimes.com":"http://mlocal.tmagazine.blogs.nytimes.com","http://travel.nytimes.com":"http://mlocal.travel.nytimes.com","http://tv.nytimes.com":"http://mlocal.tv.nytimes.com","http://up.nytimes.com":"http://mlocal.up.nytimes.com","http://video.nytimes.com":"http://mlocal.video.nytimes.com","http://well.blogs.nytimes.com":"http://mlocal.well.blogs.nytimes.com","http://wt.o.nytimes.com":"http://mlocal.wt.o.nytimes.com","http://www.nytimes.com":"http://mlocal.nytimes.com","https://artsbeat.blogs.nytimes.com":"https://mlocal.artsbeat.blogs.nytimes.com","https://autos.nytimes.com":"https://mlocal.autos.nytimes.com","https://beta620.nytimes.com":"https://mlocal.beta620.nytimes.com","https://bits.blogs.nytimes.com":"https://mlocal.bits.blogs.nytimes.com","https://campaignstops.blogs.nytimes.com":"https://mlocal.campaignstops.blogs.nytimes.com","https://dealbook.nytimes.com":"https://mlocal.dealbook.nytimes.com","https://eedition.nytimes.com":"https://mlocal.eedition.nytimes.com","https://global.nytimes.com":"https://mlocal.global.nytimes.com","https://graphics8.nytimes.com":"https://mlocal.graphics8.nytimes.com","https://homedelivery.nytimes.com":"https://mlocal.homedelivery.nytimes.com","https://jobmarket.nytimes.com":"https://mlocal.jobmarket.nytimes.com","https://krugman.blogs.nytimes.com":"https://mlocal.krugman.blogs.nytimes.com","https://latitude.blogs.nytimes.com":"https://mlocal.latitude.blogs.nytimes.com","https://lens.blogs.nytimes.com":"https://mlocal.lens.blogs.nytimes.com","https://listings.nytimes.com":"https://mlocal.listings.nytimes.com","https://markets.on.nytimes.com":"https://mlocal.markets.on.nytimes.com","https://mediadecoder.blogs.nytimes.com":"https://mlocal.mediadecoder.blogs.nytimes.com","https://mobile.nytimes.com":"https://mlocal.mobile.nytimes.com","https://movies.nytimes.com":"https://mlocal.movies.nytimes.com","https://nytimes.com":"https://mlocal.nytimes.com","https://opinionator.blogs.nytimes.com":"https://mlocal.opinionator.blogs.nytimes.com","https://placead.nytimes.com":"https://mlocal.placead.nytimes.com","https://realestate.nytimes.com":"https://mlocal.realestate.nytimes.com","https://realestateads.nytimes.com":"https://mlocal.realestateads.nytimes.com","https://runway.blogs.nytimes.com":"https://mlocal.runway.blogs.nytimes.com","https://select.nytimes.com":"https://mlocal.select.nytimes.com","https://spiderbites.nytimes.com":"https://mlocal.spiderbites.nytimes.com","https://takingnote.blogs.nytimes.com":"https://mlocal.takingnote.blogs.nytimes.com","https://theater.nytimes.com":"https://mlocal.theater.nytimes.com","https://thecaucus.blogs.nytimes.com":"https://mlocal.thecaucus.blogs.nytimes.com","https://thelede.blogs.nytimes.com":"https://mlocal.thelede.blogs.nytimes.com","https://timeslimited.nytimes.com":"https://mlocal.timeslimited.nytimes.com","https://timesmachine.nytimes.com":"https://mlocal.timesmachine.nytimes.com","https://tmagazine.blogs.nytimes.com":"https://mlocal.tmagazine.blogs.nytimes.com","https://travel.nytimes.com":"https://mlocal.travel.nytimes.com","https://tv.nytimes.com":"https://mlocal.tv.nytimes.com","https://up.nytimes.com":"https://mlocal.up.nytimes.com","https://video.nytimes.com":"https://mlocal.video.nytimes.com","https://well.blogs.nytimes.com":"https://mlocal.well.blogs.nytimes.com","https://wt.o.nytimes.com":"https://mlocal.wt.o.nytimes.com","https://www.nytimes.com":"https://mlocal.nytimes.com"};	
-	
+var mapProxyToOrigin = {"http://mlocal.6thfloor.blogs.nytimes.com":"http://6thfloor.blogs.nytimes.com","http://mlocal.artsbeat.blogs.nytimes.com":"http://artsbeat.blogs.nytimes.com","http://mlocal.autos.nytimes.com":"http://autos.nytimes.com","http://mlocal.beta620.nytimes.com":"http://beta620.nytimes.com","http://mlocal.bits.blogs.nytimes.com":"http://bits.blogs.nytimes.com","http://mlocal.dealbook.nytimes.com":"http://dealbook.nytimes.com","http://mlocal.dotearth.blogs.nytimes.com":"http://dotearth.blogs.nytimes.com","http://mlocal.eedition.nytimes.com":"http://eedition.nytimes.com","http://mlocal.frugaltraveler.blogs.nytimes.com":"http://frugaltraveler.blogs.nytimes.com","http://mlocal.gadgetwise.blogs.nytimes.com":"http://gadgetwise.blogs.nytimes.com","http://mlocal.global.nytimes.com":"http://global.nytimes.com","http://mlocal.graphics8.nytimes.com":"http://graphics8.nytimes.com","http://mlocal.homedelivery.nytimes.com":"http://homedelivery.nytimes.com","http://mlocal.jobmarket.nytimes.com":"http://jobmarket.nytimes.com","http://mlocal.json8.nytimes.com":"http://json8.nytimes.com","http://mlocal.krugman.blogs.nytimes.com":"http://krugman.blogs.nytimes.com","http://mlocal.latitude.blogs.nytimes.com":"http://latitude.blogs.nytimes.com","http://mlocal.lens.blogs.nytimes.com":"http://lens.blogs.nytimes.com","http://mlocal.listings.nytimes.com":"http://listings.nytimes.com","http://mlocal.markets.on.nytimes.com":"http://markets.on.nytimes.com","http://mlocal.mobile.nytimes.com":"http://mobile.nytimes.com","http://mlocal.movies.nytimes.com":"http://movies.nytimes.com","http://mlocal.myaccount.nytimes.com":"http://myaccount.nytimes.com","http://mlocal.nocera.blogs.nytimes.com":"http://nocera.blogs.nytimes.com","http://mlocal.nytimes.com":"http://www.nytimes.com","http://mlocal.offthedribble.blogs.nytimes.com":"http://offthedribble.blogs.nytimes.com","http://mlocal.opinionator.blogs.nytimes.com":"http://opinionator.blogs.nytimes.com","http://mlocal.placead.nytimes.com":"http://placead.nytimes.com","http://mlocal.publiceditor.blogs.nytimes.com":"http://publiceditor.blogs.nytimes.com","http://mlocal.realestate.nytimes.com":"http://realestate.nytimes.com","http://mlocal.realestateads.nytimes.com":"http://realestateads.nytimes.com","http://mlocal.spiderbites.nytimes.com":"http://spiderbites.nytimes.com","http://mlocal.takingnote.blogs.nytimes.com":"http://takingnote.blogs.nytimes.com","http://mlocal.theater.nytimes.com":"http://theater.nytimes.com","http://mlocal.thecaucus.blogs.nytimes.com":"http://thecaucus.blogs.nytimes.com","http://mlocal.thelede.blogs.nytimes.com":"http://thelede.blogs.nytimes.com","http://mlocal.timeslimited.nytimes.com":"http://timeslimited.nytimes.com","http://mlocal.timesmachine.nytimes.com":"http://timesmachine.nytimes.com","http://mlocal.tmagazine.blogs.nytimes.com":"http://tmagazine.blogs.nytimes.com","http://mlocal.travel.nytimes.com":"http://travel.nytimes.com","http://mlocal.up.nytimes.com":"http://up.nytimes.com","http://mlocal.video.nytimes.com":"http://video.nytimes.com","http://mlocal.well.blogs.nytimes.com":"http://well.blogs.nytimes.com","http://mlocal.wordplay.blogs.nytimes.com":"http://wordplay.blogs.nytimes.com","http://mlocal.wt.o.nytimes.com":"http://wt.o.nytimes.com","https://mlocal.6thfloor.blogs.nytimes.com":"https://6thfloor.blogs.nytimes.com","https://mlocal.artsbeat.blogs.nytimes.com":"https://artsbeat.blogs.nytimes.com","https://mlocal.autos.nytimes.com":"https://autos.nytimes.com","https://mlocal.beta620.nytimes.com":"https://beta620.nytimes.com","https://mlocal.bits.blogs.nytimes.com":"https://bits.blogs.nytimes.com","https://mlocal.dealbook.nytimes.com":"https://dealbook.nytimes.com","https://mlocal.dotearth.blogs.nytimes.com":"https://dotearth.blogs.nytimes.com","https://mlocal.eedition.nytimes.com":"https://eedition.nytimes.com","https://mlocal.frugaltraveler.blogs.nytimes.com":"https://frugaltraveler.blogs.nytimes.com","https://mlocal.gadgetwise.blogs.nytimes.com":"https://gadgetwise.blogs.nytimes.com","https://mlocal.global.nytimes.com":"https://global.nytimes.com","https://mlocal.graphics8.nytimes.com":"https://graphics8.nytimes.com","https://mlocal.homedelivery.nytimes.com":"https://homedelivery.nytimes.com","https://mlocal.jobmarket.nytimes.com":"https://jobmarket.nytimes.com","https://mlocal.json8.nytimes.com":"https://json8.nytimes.com","https://mlocal.krugman.blogs.nytimes.com":"https://krugman.blogs.nytimes.com","https://mlocal.latitude.blogs.nytimes.com":"https://latitude.blogs.nytimes.com","https://mlocal.lens.blogs.nytimes.com":"https://lens.blogs.nytimes.com","https://mlocal.listings.nytimes.com":"https://listings.nytimes.com","https://mlocal.markets.on.nytimes.com":"https://markets.on.nytimes.com","https://mlocal.mobile.nytimes.com":"https://mobile.nytimes.com","https://mlocal.movies.nytimes.com":"https://movies.nytimes.com","https://mlocal.myaccount.nytimes.com":"https://myaccount.nytimes.com","https://mlocal.nocera.blogs.nytimes.com":"https://nocera.blogs.nytimes.com","https://mlocal.nytimes.com":"https://www.nytimes.com","https://mlocal.offthedribble.blogs.nytimes.com":"https://offthedribble.blogs.nytimes.com","https://mlocal.opinionator.blogs.nytimes.com":"https://opinionator.blogs.nytimes.com","https://mlocal.placead.nytimes.com":"https://placead.nytimes.com","https://mlocal.publiceditor.blogs.nytimes.com":"https://publiceditor.blogs.nytimes.com","https://mlocal.realestate.nytimes.com":"https://realestate.nytimes.com","https://mlocal.realestateads.nytimes.com":"https://realestateads.nytimes.com","https://mlocal.spiderbites.nytimes.com":"https://spiderbites.nytimes.com","https://mlocal.takingnote.blogs.nytimes.com":"https://takingnote.blogs.nytimes.com","https://mlocal.theater.nytimes.com":"https://theater.nytimes.com","https://mlocal.thecaucus.blogs.nytimes.com":"https://thecaucus.blogs.nytimes.com","https://mlocal.thelede.blogs.nytimes.com":"https://thelede.blogs.nytimes.com","https://mlocal.timeslimited.nytimes.com":"https://timeslimited.nytimes.com","https://mlocal.timesmachine.nytimes.com":"https://timesmachine.nytimes.com","https://mlocal.tmagazine.blogs.nytimes.com":"https://tmagazine.blogs.nytimes.com","https://mlocal.travel.nytimes.com":"https://travel.nytimes.com","https://mlocal.up.nytimes.com":"https://up.nytimes.com","https://mlocal.video.nytimes.com":"https://video.nytimes.com","https://mlocal.well.blogs.nytimes.com":"https://well.blogs.nytimes.com","https://mlocal.wordplay.blogs.nytimes.com":"https://wordplay.blogs.nytimes.com","https://mlocal.wt.o.nytimes.com":"https://wt.o.nytimes.com"};
+var mapOriginToProxy = {"http://6thfloor.blogs.nytimes.com":"http://mlocal.6thfloor.blogs.nytimes.com","http://artsbeat.blogs.nytimes.com":"http://mlocal.artsbeat.blogs.nytimes.com","http://autos.nytimes.com":"http://mlocal.autos.nytimes.com","http://beta620.nytimes.com":"http://mlocal.beta620.nytimes.com","http://bits.blogs.nytimes.com":"http://mlocal.bits.blogs.nytimes.com","http://dealbook.nytimes.com":"http://mlocal.dealbook.nytimes.com","http://dotearth.blogs.nytimes.com":"http://mlocal.dotearth.blogs.nytimes.com","http://eedition.nytimes.com":"http://mlocal.eedition.nytimes.com","http://frugaltraveler.blogs.nytimes.com":"http://mlocal.frugaltraveler.blogs.nytimes.com","http://gadgetwise.blogs.nytimes.com":"http://mlocal.gadgetwise.blogs.nytimes.com","http://global.nytimes.com":"http://mlocal.global.nytimes.com","http://graphics8.nytimes.com":"http://mlocal.graphics8.nytimes.com","http://homedelivery.nytimes.com":"http://mlocal.homedelivery.nytimes.com","http://jobmarket.nytimes.com":"http://mlocal.jobmarket.nytimes.com","http://json8.nytimes.com":"http://mlocal.json8.nytimes.com","http://krugman.blogs.nytimes.com":"http://mlocal.krugman.blogs.nytimes.com","http://latitude.blogs.nytimes.com":"http://mlocal.latitude.blogs.nytimes.com","http://lens.blogs.nytimes.com":"http://mlocal.lens.blogs.nytimes.com","http://listings.nytimes.com":"http://mlocal.listings.nytimes.com","http://markets.on.nytimes.com":"http://mlocal.markets.on.nytimes.com","http://mobile.nytimes.com":"http://mlocal.mobile.nytimes.com","http://movies.nytimes.com":"http://mlocal.movies.nytimes.com","http://myaccount.nytimes.com":"http://mlocal.myaccount.nytimes.com","http://nocera.blogs.nytimes.com":"http://mlocal.nocera.blogs.nytimes.com","http://nytimes.com":"http://mlocal.nytimes.com","http://offthedribble.blogs.nytimes.com":"http://mlocal.offthedribble.blogs.nytimes.com","http://opinionator.blogs.nytimes.com":"http://mlocal.opinionator.blogs.nytimes.com","http://placead.nytimes.com":"http://mlocal.placead.nytimes.com","http://publiceditor.blogs.nytimes.com":"http://mlocal.publiceditor.blogs.nytimes.com","http://realestate.nytimes.com":"http://mlocal.realestate.nytimes.com","http://realestateads.nytimes.com":"http://mlocal.realestateads.nytimes.com","http://spiderbites.nytimes.com":"http://mlocal.spiderbites.nytimes.com","http://takingnote.blogs.nytimes.com":"http://mlocal.takingnote.blogs.nytimes.com","http://theater.nytimes.com":"http://mlocal.theater.nytimes.com","http://thecaucus.blogs.nytimes.com":"http://mlocal.thecaucus.blogs.nytimes.com","http://thelede.blogs.nytimes.com":"http://mlocal.thelede.blogs.nytimes.com","http://timeslimited.nytimes.com":"http://mlocal.timeslimited.nytimes.com","http://timesmachine.nytimes.com":"http://mlocal.timesmachine.nytimes.com","http://tmagazine.blogs.nytimes.com":"http://mlocal.tmagazine.blogs.nytimes.com","http://travel.nytimes.com":"http://mlocal.travel.nytimes.com","http://up.nytimes.com":"http://mlocal.up.nytimes.com","http://video.nytimes.com":"http://mlocal.video.nytimes.com","http://well.blogs.nytimes.com":"http://mlocal.well.blogs.nytimes.com","http://wordplay.blogs.nytimes.com":"http://mlocal.wordplay.blogs.nytimes.com","http://wt.o.nytimes.com":"http://mlocal.wt.o.nytimes.com","http://www.nytimes.com":"http://mlocal.nytimes.com","https://6thfloor.blogs.nytimes.com":"https://mlocal.6thfloor.blogs.nytimes.com","https://artsbeat.blogs.nytimes.com":"https://mlocal.artsbeat.blogs.nytimes.com","https://autos.nytimes.com":"https://mlocal.autos.nytimes.com","https://beta620.nytimes.com":"https://mlocal.beta620.nytimes.com","https://bits.blogs.nytimes.com":"https://mlocal.bits.blogs.nytimes.com","https://dealbook.nytimes.com":"https://mlocal.dealbook.nytimes.com","https://dotearth.blogs.nytimes.com":"https://mlocal.dotearth.blogs.nytimes.com","https://eedition.nytimes.com":"https://mlocal.eedition.nytimes.com","https://frugaltraveler.blogs.nytimes.com":"https://mlocal.frugaltraveler.blogs.nytimes.com","https://gadgetwise.blogs.nytimes.com":"https://mlocal.gadgetwise.blogs.nytimes.com","https://global.nytimes.com":"https://mlocal.global.nytimes.com","https://graphics8.nytimes.com":"https://mlocal.graphics8.nytimes.com","https://homedelivery.nytimes.com":"https://mlocal.homedelivery.nytimes.com","https://jobmarket.nytimes.com":"https://mlocal.jobmarket.nytimes.com","https://json8.nytimes.com":"https://mlocal.json8.nytimes.com","https://krugman.blogs.nytimes.com":"https://mlocal.krugman.blogs.nytimes.com","https://latitude.blogs.nytimes.com":"https://mlocal.latitude.blogs.nytimes.com","https://lens.blogs.nytimes.com":"https://mlocal.lens.blogs.nytimes.com","https://listings.nytimes.com":"https://mlocal.listings.nytimes.com","https://markets.on.nytimes.com":"https://mlocal.markets.on.nytimes.com","https://mobile.nytimes.com":"https://mlocal.mobile.nytimes.com","https://movies.nytimes.com":"https://mlocal.movies.nytimes.com","https://myaccount.nytimes.com":"https://mlocal.myaccount.nytimes.com","https://nocera.blogs.nytimes.com":"https://mlocal.nocera.blogs.nytimes.com","https://nytimes.com":"https://mlocal.nytimes.com","https://offthedribble.blogs.nytimes.com":"https://mlocal.offthedribble.blogs.nytimes.com","https://opinionator.blogs.nytimes.com":"https://mlocal.opinionator.blogs.nytimes.com","https://placead.nytimes.com":"https://mlocal.placead.nytimes.com","https://publiceditor.blogs.nytimes.com":"https://mlocal.publiceditor.blogs.nytimes.com","https://realestate.nytimes.com":"https://mlocal.realestate.nytimes.com","https://realestateads.nytimes.com":"https://mlocal.realestateads.nytimes.com","https://spiderbites.nytimes.com":"https://mlocal.spiderbites.nytimes.com","https://takingnote.blogs.nytimes.com":"https://mlocal.takingnote.blogs.nytimes.com","https://theater.nytimes.com":"https://mlocal.theater.nytimes.com","https://thecaucus.blogs.nytimes.com":"https://mlocal.thecaucus.blogs.nytimes.com","https://thelede.blogs.nytimes.com":"https://mlocal.thelede.blogs.nytimes.com","https://timeslimited.nytimes.com":"https://mlocal.timeslimited.nytimes.com","https://timesmachine.nytimes.com":"https://mlocal.timesmachine.nytimes.com","https://tmagazine.blogs.nytimes.com":"https://mlocal.tmagazine.blogs.nytimes.com","https://travel.nytimes.com":"https://mlocal.travel.nytimes.com","https://up.nytimes.com":"https://mlocal.up.nytimes.com","https://video.nytimes.com":"https://mlocal.video.nytimes.com","https://well.blogs.nytimes.com":"https://mlocal.well.blogs.nytimes.com","https://wordplay.blogs.nytimes.com":"https://mlocal.wordplay.blogs.nytimes.com","https://wt.o.nytimes.com":"https://mlocal.wt.o.nytimes.com","https://www.nytimes.com":"https://mlocal.nytimes.com"};
+
 if (typeof(mw) == "undefined") {
 	window.mw = {};
 }
@@ -72,10 +78,10 @@ function fetch(url, map) {
 		if (typeof(mw) != 'undefined' && mw.debug == true) {
 			console.log("Warning. No rule to modify host (" + key + ").")
 		}
-		return url;
+		return url.href;
 	}
 	
-	return result + url.pathname + url.search;
+	return result + url.pathname + url.search + url.hash;
 }
 
 function detect(rawURL) {
@@ -102,7 +108,7 @@ function detect(rawURL) {
 function denormalize(url, properties) {
   url = getParsedURL(url);
   if (properties.relative) {    
-    return url.pathname;
+    return url.pathname + url.search + url.hash;
   } else {
     if (properties.secure) {
       return url.href.replace("http://","https://");
@@ -118,6 +124,10 @@ function denormalize(url, properties) {
 mw.proxyURLToOrigin = function(rawURL){	
 
 	var properties = detect(rawURL);
+
+	// Make sure it includes the host, or it will still be proxied!
+	properties.relative = false;
+
 	var url = getParsedURL(rawURL);
 	var catch_all = detect_catch_all(url);
 
@@ -138,11 +148,16 @@ mw.originURLToProxy = function(rawURL){
 	var catch_all = detect_catch_all(url);
 
   if (catch_all) {    
-	  url = add_catch_all(url);
+	  url = strip_catch_all(url);
   }
 
-  url = fetch(url, mapOriginToProxy);
-	url = denormalize(url, properties);
+  url = getParsedURL(fetch(url, mapOriginToProxy));
+  var globalLocation = getParsedURL(window.location.href);
+  if (detect_catch_all(globalLocation)) {
+      url = add_catch_all(url);
+  }
+
+	url = denormalize(url.href, properties);
 	
 	return url;
 }
@@ -150,6 +165,10 @@ mw.originURLToProxy = function(rawURL){
 }());
 
 
+
+/*
+ * File: http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.104/uranium-pretty.js
+ */
 (function () {
 /**
   Basics
@@ -1917,6 +1936,31 @@ Ur.WindowLoaders["carousel"] = (function() {
     this.button = components["button"] === undefined ? {} : components["button"];
     this.count = components["count"];
     this.dots = components["dots"];
+
+    this.flag = {
+      click: false,
+      increment: false,
+      loop: false,
+      lock: null,
+      timeoutId: null,
+      touched: false
+    };
+
+    this.options = {
+      autoscroll: true,
+      autoscrollDelay: 5000,
+      autoscrollForward: true,
+      center: true,
+      cloneLength: 1,
+      fill: 0,
+      infinite: true,
+      transform3d: true,
+      touch: true,
+      verticalScroll: true
+    };
+    
+    this.itemIndex = 0;
+    this.translate = 0;
     
     var $container = x$(this.container);
     var preCoords = {x: 0, y: 0};
@@ -1933,30 +1977,7 @@ Ur.WindowLoaders["carousel"] = (function() {
       // add an internal event handler to handle all events on the container:
       // x$(self.container).on("event", self.handleEvent);
 
-      self.flag = {
-        click: false,
-        increment: false,
-        loop: false,
-        lock: null,
-        timeoutId: null,
-        touched: false
-      };
-      self.options = {
-        autoscroll: true,
-        autoscrollDelay: 5000,
-        autoscrollForward: true,
-        center: true,
-        cloneLength: 1,
-        fill: 0,
-        infinite: true,
-        transform3d: true,
-        touch: true,
-        verticalScroll: true
-      };
-
       readAttributes();
-
-      self.itemIndex = 0;
 
       if (self.options.infinite) {
         var items = x$(self.items).find("[data-ur-carousel-component='item']");
@@ -1974,7 +1995,7 @@ Ur.WindowLoaders["carousel"] = (function() {
           items[0].parentNode.insertBefore(clone, items[0]);
         }
       }
-      
+
       if (!self.options.transform3d) {
         translatePrefix = "translate(";
         translateSuffix = ")";
@@ -2101,8 +2122,8 @@ Ur.WindowLoaders["carousel"] = (function() {
       var totalWidth = 0;
 
       var divisions = [];
-      var remainder = visibleWidth;
       if (self.options.fill > 0) {
+        var remainder = visibleWidth;
         for (var i = self.options.fill; i > 0; i--) {
           var length = Math.round(remainder/i);
           divisions.push(length);
@@ -2136,7 +2157,7 @@ Ur.WindowLoaders["carousel"] = (function() {
       if (oldSnapWidth)
         self.destinationOffset = cumulativeOffset;
 
-      translate(cumulativeOffset);
+      translateX(cumulativeOffset);
     }
 
     this.autoscrollStart = function() {
@@ -2229,10 +2250,10 @@ Ur.WindowLoaders["carousel"] = (function() {
       preCoords.y = coords.y;
 
       if (coords !== null) {
-        var translateX = getTranslateX(self.items);
+        var translate = getTranslateX();
 
         if (startingOffset == null)
-          startingOffset = translateX;
+          startingOffset = translate;
         else
           // Fast swipe
           startingOffset = self.destinationOffset; //Factor incomplete previous swipe
@@ -2290,7 +2311,7 @@ Ur.WindowLoaders["carousel"] = (function() {
           }
         }
 
-        translate(dist);
+        translateX(dist);
       }
     }
 
@@ -2336,7 +2357,7 @@ Ur.WindowLoaders["carousel"] = (function() {
       if (self.flag.increment)
         return;
 
-      startingOffset = getTranslateX(self.items);
+      startingOffset = getTranslateX();
       moveHelper(direction);
     };
 
@@ -2348,14 +2369,14 @@ Ur.WindowLoaders["carousel"] = (function() {
       var items = x$(self.items).find("[data-ur-carousel-component='item']");
 
       if (self.options.infinite) {
-        var oldTransform = getTranslateX(self.items);
+        var oldTransform = getTranslateX();
         var altTransform = oldTransform;
 
         if (newIndex < self.options.cloneLength) { // at the beginning of carousel
           var offset = items[self.options.cloneLength].offsetLeft - items[self.itemCount - self.options.cloneLength].offsetLeft;
           if (!self.flag.loop) {
             altTransform += offset;
-            translate(altTransform);
+            translateX(altTransform);
             startingOffset += offset;
           }
           newIndex += self.realItemCount;
@@ -2365,7 +2386,7 @@ Ur.WindowLoaders["carousel"] = (function() {
           var offset = items[self.itemCount - self.options.cloneLength].offsetLeft - items[self.options.cloneLength].offsetLeft;
           if (!self.flag.loop) {
             altTransform += offset;
-            translate(altTransform);
+            translateX(altTransform);
             startingOffset += offset;
           }
           newIndex -= self.realItemCount;
@@ -2393,8 +2414,8 @@ Ur.WindowLoaders["carousel"] = (function() {
 
       self.flag.increment = false;
 
-      var translateX = getTranslateX(self.items);
-      var distance = self.destinationOffset - translateX;
+      var translate = getTranslateX();
+      var distance = self.destinationOffset - translate;
       var increment = distance - zeroFloor(distance / (self.options.transform3d ? 1.1 : 1.2));
 
       // Hacky -- this is for the desktop browser only -- to fix rounding errors
@@ -2402,9 +2423,9 @@ Ur.WindowLoaders["carousel"] = (function() {
       if(Math.abs(increment) < 0.01)
         increment = 0;
 
-      var newTransform = increment + translateX;
+      var newTransform = increment + translate;
 
-      translate(newTransform);
+      translateX(newTransform);
 
       if (increment != 0)
         self.flag.increment = true;
@@ -2424,9 +2445,14 @@ Ur.WindowLoaders["carousel"] = (function() {
       return endPos === undefined ? 0 : endPos.x - startPos.x;
     }
     
-    function translate(x) {
+    function translateX(x) {
+      self.translate = x;
       var items = self.items;
       items.style.webkitTransform = items.style.msTransform = items.style.OTransform = items.style.MozTransform = items.style.transform = translatePrefix + x + "px, 0px" + translateSuffix;
+    }
+    
+    function getTranslateX() {
+      return self.translate;
     }
     
     initialize();
@@ -2445,21 +2471,6 @@ Ur.WindowLoaders["carousel"] = (function() {
   function stifle(e) {
     e.preventDefault();
     e.stopPropagation();
-  }
-
-  function getTranslateX(obj) {
-    var style = getComputedStyle(obj);
-    var transform = style["webkitTransform"] || style["msTransform"] || style["OTransform"] || style["MozTransform"] || style["transform"];
-    if (transform != "none") {
-      if (window.WebKitCSSMatrix)
-        return new WebKitCSSMatrix(transform).m41;
-      else
-        return parseInt(transform.split(",")[4]);
-    }
-    else {
-      Ur.error("no transform found");
-      return 0;
-    }
   }
 
   // Private constructors
@@ -4422,9 +4433,8 @@ Ur.WindowLoaders["zoom"] = (function() {
       if (self.state == "enabled-in") {
         $img.css({ webkitTransitionDelay: "", MozTransitionDelay: "", OTransitionDelay: "", transitionDelay: "" });
         
+        self.img.src = $img.attr("data-ur-src")[0];
         if (loaded_imgs.indexOf(self.img.getAttribute("data-ur-src")) == -1) {
-          self.img.src = $img.attr("data-ur-src")[0];
-
           setTimeout(function() {
             if (loaded_imgs.indexOf(self.img.getAttribute("data-ur-src")) == -1)
               $idler.attr("data-ur-state", "enabled");
@@ -4854,148 +4864,10 @@ Ur.QuickLoaders['zoom-preview'] = (function(){
   return ZoomPreviewLoader;
 })();
 
-x$(window).on(
-  'load',
-  function(){setTimeout(function(){ if (window.pageYOffset < 50) {window.scrollTo(0,1);}},0);}
-);
-                  
-x$(window).on(
-  'load',
-  function(){setTimeout(function(){ if (parent.window.pageYOffset < 50) {parent.window.scrollTo(0,1);}},0);}
-);
 
-/* 
- * Desktop Site Link
- *
- * The Desktop Site Link is a little Javascript snippet that redirects you
- * to the desktop version of whatever page you are on.
- * 
- * Basically if you are on m.example.com it will take you to www.example.com. However
- * sometimes the rewriter rules are more complicated than that. This will take
- * the rewriter rules for your project into account.
- *
- * It also sets the mw_mobile_site cookie. This is the cookie that indicates to the
- * customer's redirection code whether or not a mobile user should be redirected.
- * 
- * USAGE:
- *
- * 3 steps to use with Tritium:
- *
- * 1. Add this script file
- *
- * 2. Insert a link with the 'mw_desktop_link' ID, i.e.:
-     inject("<a id='mw_desktop_link'>Desktop Site</a>")
- *
- * 3. Configure by placing the 'mw_desktop_link_config' element anywhere on your page, i.e.:
-     insert("div") {
-       attribute("id", "mw_desktop_link_config")
-       attribute("matcher", $rewrite_incoming_matcher)
-       attribute("replacement", $rewrite_incoming_replacement)
-       attribute("cookie_hours", "0")
-       attribute("cookie_domain", ".belk.com")
-       attribute("rewriter_json", $rewrite_incoming_json)
-     }
- *
- * The 'mw_desktop_link_config' element can be used to configure how the desktop link works
- * with these parameters:
- *
- *   matcher= Regex for matching your mobile URL.
- *
- *   replacement= Replacement string to create a desktop URL out of mobile URL.
- *
- *   cookie_hours= (optional) The number of hours for which the mw_mobile_site cookie will be valid.
- *   Defaults to '0', in which case 'expires' is not specified so the cookie is transient.
- *
- *   cookie_domain= (optional) Set this to the domain which is shared by the mobile site
- *   and the desktop site (i.e. .example.com). If you don't select anything it will be set
- *   for you, but it cannot be automatically set if the top-level domain has more than one
- *   label (as in .co.uk).
- *
- *   immediate= (optional) If you set immediate to 'true' then as soon as this javascript executes
- *   the user will be redirected to the equivalent desktop page.
- *
- *   this_page_only= (optional) If you set this_page_only to 'true' then the desktop site cookie
- *   will only apply to this particular page. Works will with 'immediate' for specifying that this
- *   particular page has not been reformatted for mobile.
+/*
+ * File: http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.73/gsub.js
  */
-x$(document).on("DOMContentLoaded", function() {
-  var me = document.getElementById("mw_desktop_link_config");
-  
-  if (me === null) {
-    console.log("No mw_desktop_link_config element found. This window url : (" + window.document.location.href +")");
-    return;
-  }
-
-  var cookie_domain = me.getAttribute("cookie_domain");
-  if (!cookie_domain) {
-    cookie_domain = "." + /([a-z\-]+\.[a-z\-]+)($|\/|\?)/.exec(window.location.toString())[1];
-  }
-  var cookie_hours = 1;
-  var cookie_hours_attribute = me.getAttribute("cookie_hours");
-  if (cookie_hours_attribute) {
-    cookie_hours = parseInt(cookie_hours_attribute);
-  }
-  var cookie_seconds = cookie_hours * 1000 * 60 * 60;
-
-  var rewriters;
-  var rewriter_json = me.getAttribute("rewriter_json");
-
-  if (rewriter_json !== null) {
-    var rewriters = JSON.parse(rewriter_json);
-    // replace ruby-style capture groups (\1) with js-style ($1)
-    for (var i=0;i<rewriters.length;i++) {
-      rewriters[i]["replacement"] = rewriters[i]["replacement"].replace(/\\/g, "$");
-    }
-  }
-  
-  var set_desktop_cookie = function() {
-    var expires = new Date(new Date().getTime() + cookie_seconds);
-    var cookie = "mw_mobile_site=false; ";
-    // zero cookie seconds means a session/transient cookie - no 'expires' portion
-    if (cookie_seconds != 0) {
-      cookie += "expires=" + expires.toGMTString() + "; ";
-    }
-    if (me.getAttribute("this_page_only") == "true") {
-      cookie += "path=" + window.location.pathname + "; ";
-    } else {
-      cookie += "path=/; ";
-    }
-    cookie += "domain=" + cookie_domain;
-    document.cookie = cookie;
-    return true;
-  };
-
-  // Get the desktop equivalent to the current location (i.e. get www.example.com for m.example.com)
-  var secure = (window.location.protocol=="http:")?"false":"true";
-  
-  var get_desktop_location = function() {
-    var location = window.location.hostname;
-    if (rewriters != null) {
-      for (var j=0;j<rewriters.length;j++) {
-        var matcher = new RegExp(rewriters[j]['matcher']);
-        var replacement = rewriters[j]['replacement'];
-        replacement = replacement.replace(/\$secure/, secure);
-        location = location.replace(matcher, replacement);
-      }
-    } else {
-			return mw.proxyURLToOrigin(window.location.href);	
-    }
-    return window.location.protocol + "//" + location + window.location.pathname + window.location.search;
-  };
-  var desktop_location = get_desktop_location();
-
-  var desktop_link = document.getElementById("mw_desktop_link");
-  if (desktop_link) {
-    desktop_link.onclick = set_desktop_cookie;
-    desktop_link.setAttribute("href", desktop_location);
-  }
-
-  if (me.getAttribute("immediate") == "true") {
-    set_desktop_cookie();
-    window.location = desktop_location;
-  }
-});
-
 /* Ruby style gsub / Sean Jezewski
  * * * * * * * * * 
  */
@@ -5095,6 +4967,10 @@ function gsub(input, matcher, replace) {
 }
 
 
+
+/*
+ * File: http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.73/passthrough_ajax.js
+ */
 /* * * * * * * * * * * 
  * Tritium usage:
  * 1 - Add this script, and gsub script
@@ -5205,6 +5081,10 @@ function gsub(input, matcher, replace) {
     function hijack_open(method, url, some_boolean) {
         var new_url = passthrough_url(url);
         this._open(method, new_url, some_boolean);
+
+        // Semi-standard header used by tritium to differentiate Ajax requests from regular page requests
+        this.setRequestHeader("X-Requested-With", "XMLHttpRequest") 
+
     }
 
     if (XMLHttpRequest)
@@ -5220,4 +5100,8 @@ function gsub(input, matcher, replace) {
 })();
 
 
+
+/*
+ * File: main/stub.js
+ */
 // Delete me when ready
