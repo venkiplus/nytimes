@@ -11049,32 +11049,6 @@ $( document ).bind( "pagecreate create", function( e ) {
 
 
 /*
- * File: vendor/jquery.unveil.min.js
- */
-/**
- * jQuery Unveil
- * A very lightweight jQuery plugin to lazy load images
- * http://luis-almeida.github.com/unveil
- *
- * Licensed under the MIT license.
- * Copyright 2013 Luís Almeida
- * https://github.com/luis-almeida
- */
-
-;(function($){$.fn.unveil=function(threshold){var $w=$(window),th=threshold||0,retina=window.devicePixelRatio>1,attrib=retina?"data-src-retina":"data-src",images=this,loaded,inview,source;this.one("unveil",function(){source=this.getAttribute(attrib);source=source||this.getAttribute("data-src");if(source)this.setAttribute("src",source);});function unveil(){inview=images.filter(function(){var $e=$(this),wt=$w.scrollTop(),wb=wt+$w.height(),et=$e.offset().top,eb=et+$e.height();return eb>=wt-th&&et<=wb+th;});loaded=inview.trigger("unveil");images=images.not(loaded);}$w.scroll(unveil);$w.resize(unveil);unveil();return this;};})(jQuery);
-
-
-
-/*
- * File: vendor/jquery.unveil.config.js
- */
-$(document).ready(function() {
-  $("img").unveil(200);
-});
-
-
-
-/*
  * File: vendor/bootstrap.custom.js
  */
 /* ===================================================
@@ -14079,8 +14053,8 @@ window.Modernizr = (function( window, document, undefined ) {
 /*
  * File: main/base.js
  */
-$(document).on("DOMContentLoaded", function() {
-  $("#mw-pers-nav-menu, #mw-pers-nav-mask").click(function() {
-    $("#mw-pers-nav, #mw-pers-nav-mask, #mw-body-content").toggleClass("mw-pers-nav-active");
-  })
+x$(document).on("DOMContentLoaded", function() {
+  x$("#mw-pers-nav-menu, #mw-pers-nav-mask").click(function() {
+    x$("#mw-pers-nav, #mw-pers-nav-mask, #mw-body-content").toggleClass("mw-pers-nav-active");
+  });
 });

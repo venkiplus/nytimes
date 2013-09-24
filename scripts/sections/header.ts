@@ -1,9 +1,10 @@
 $("./body") {
    insert_top("header", class: "mw-header mw-keep") {
-     insert_top("a", class: "padded mw-logo", href: "/") {
+     insert_top("a", class: "mw-logo", href: "/") {
        move_here("//img[@id='mastheadLogo']|//img[@id = 'NYTLogo']") {
          remove("@width")
          remove("@height")
+         # if this is the article page
          $("self::img[@id ='NYTLogo']/..") {
           add_class("mw-box-flex1")
           $("..") {
@@ -11,6 +12,7 @@ $("./body") {
           }
          }
        }
+       # Sub-section
        move_here("//div[@id = 'masthead']/h2/a", "after") {
          add_class("mw-sub-section mw-box-flex1")
        }
@@ -21,11 +23,13 @@ $("./body") {
      $$("#date > p") {
        wrap_text_children("span", id: "day")
      }
+     move_here("selector", "position")
   }
   inner_wrap("div", id: "mw-body-content") {
     # persistent navigation
     insert_bottom("div", id: "mw-pers-nav-mask")
     insert_before("div", id: "mw-pers-nav") {
+      # Home page navigation
       move_here("//div[@id = 'HPLeftNav']") {
         add_class("mw-box-shadow")
         $(".//ul[contains(@class, 'featured')]") {
@@ -37,9 +41,6 @@ $("./body") {
         $(".//li[contains(@class, 'firstItem')]/ul[@class = 'secondary']") {
           insert_before("h6", "Other")
         }
-        # $(".//ul[@class = 'secondary']") {
-        #   add_class("mw_")
-        # }
         $(".//h6") {
           name("div")
           add_class("mw_toggler_bar mw_bar2")
@@ -50,6 +51,30 @@ $("./body") {
         $(".//li[contains(@class, 'singleRule')]") {
           ur_toggler("./div[contains(@class, 'mw_bar2')]","./ul")
         }
+      }
+      # navigation on non home page
+      move_here("//div[contains(@class, 'navigation')]/ul", "bottom") {
+        add_class("mw-box-shadow")
+        $("./li[contains(@class, 'first')]") {
+          $("./a") {
+            copy_to("following-sibling::ul", "bottom") {
+              text() {
+                prepend("More ") 
+              }
+              wrap("li")
+            }
+            name("div")
+            attributes(href: "")
+            add_class("mw_toggler_bar mw_bar2")
+          }
+          # make a uranium toggler where first element is the button and second is the content 
+          ur_toggler("./div","./ul")
+        }
+        $(".//li/a") {
+          add_class("mw_bar1")
+        }
+        
+        
       }
     }
   }
