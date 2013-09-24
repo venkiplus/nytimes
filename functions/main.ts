@@ -364,3 +364,21 @@
   }
   $inferred_content_type
 }
+
+
+
+@func XMLNode.remove_string(Text %string) {
+  inner() {
+    replace(%string, "")
+  }
+}
+
+# # creates bootstrap accordion bars from content
+# @func XMLNode.accordionize(Text %button, Text %content) {
+#   $(%button) {
+#     name("div")
+#     add_class("mw_bar2")
+#   }
+#   $()
+# }
+# @func XMLNode.remove_inline_styles() {

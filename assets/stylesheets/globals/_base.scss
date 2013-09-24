@@ -18,7 +18,7 @@ a, a:hover, a:visited {
 }
 
 // This CSS ensures non-wanted items are not displayed
-._hide {
+._hide, .mw-hide {
   display:none;
 }
 
@@ -29,6 +29,19 @@ ul, li {
 }
 h6 {
   margin: 0;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+.padded {
+  padding: $spacing;
+}
+.gapped {
+  margin: $spacing;
 }
 
 // Essential CSS for the Uranium widgets to work. For more
@@ -86,9 +99,51 @@ div[data-ur-carousel-component="count"] {
   margin-top: 7px;
   display: inline-block;
 }
-a[data-ur-carousel-component="item"] {
-  img {
-    width:320px;
-    height:214px;
+.mw-box-shadow {
+  @include box-shadow($box-shadow-demo-pers-nav);
+}
+$slider-width: 255px;
+#mw-body-content{
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  overflow: hidden;
+  background: white;
+  @include box-shadow($box-shadow-demo-pers-nav);
+  // Fixes the flashing that occurs when the universal navigation is clicked due to the redraw
+  @include transform(translate(0, 0));
+  @include transition (all 0.3s ease);
+  // Fixes the flashing that occurs when togglers and tabs clicked due to the redraw
+  [data-ur-set = 'tabs'], [data-ur-set = 'toggler'] {
+    @include transform(translate(0, 0));
+  }
+  &.mw-pers-nav-active {
+    @include transform(translate(-$slider-width, 0));
+  }
+}
+#mw-pers-nav-mask {
+  display: none;
+  &.mw-pers-nav-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+  }
+}
+#mw-pers-nav{
+  opacity: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: white;
+  width: $slider-width;
+  min-height: 100%;
+  position: absolute;
+  &.mw-pers-nav-active {
+    opacity: 1;
+    @include prefixer(transition-delay, 0s);
   }
 }

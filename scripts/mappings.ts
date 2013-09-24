@@ -22,6 +22,13 @@ match($status) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
+      # Article page
+      # mapping path to /year/month/day
+      # EX URL: http://www.nytimes.com/2013/09/24/world/africa/kenya-presses-assault-against-militants-in-mall.html?hp
+      with(/^\/\d{4}\/\d{2}\/\d/) {
+        log("--> Importing pages/article.ts in mappings.ts")
+        @import pages/article.ts
+      }
       else() {
         log("--> No page match in mappings.ts, out of scope")
         @import pages/out_of_scope.ts

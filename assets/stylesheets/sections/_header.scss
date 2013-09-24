@@ -1,10 +1,20 @@
-._header {
-  text-align: center;
+.mw-header {
+//  text-align: center;
   margin-bottom: 10px;
   border-bottom: 1px solid gray;
   img {
-    width: 75%;
+    max-width: 100%;
     max-height: 50px;
+  }
+  #mastheadLogo {
+    max-width: 75%;
+  }
+  #NYTLogo {
+    margin: $spacing 0;
+  }
+  .mw-sub-section {
+    padding: 10px 10px 0 0;
+    font-size: 1.6em;
   }
   #date {
     p {

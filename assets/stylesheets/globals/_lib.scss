@@ -18,11 +18,49 @@ $border_color1: #c1bfbf;
 $border1:       1px solid $border_color1;
 $border_color3: #999;
 $border3:       1px solid $border_color3;
+$header-btn-box-shadow:   0px -1px rgba(255,255,255,0.5), 0 1px rgba(0,0,0,0.5);
+$box-shadow-demo-inset:   inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 1px rgba(0,0,0,.3);
+//$box-shadow-demo-inset2:   inset 0 1px 0 rgba(0,0,0, 0.5), inset 0 -1px 1px rgba(0,0,0,.5);
+$box-shadow-demo-pers-nav: 0px 0px 6px 3px rgba(0, 0, 0, 0.25);
+
 
 //gray bar color
 @mixin grad1 {
   @include background(linear-gradient(#f7f7f7, #eaeaea 50%, #e0e0e0 51%, #d6d6d6));
   background-color: #eaeaea; /* Old browsers */
+}
+
+@mixin btn1 {
+  display: block;
+  padding: $spacing;
+  margin: $spacing;
+  border: $border3;
+  background: white;
+  border-radius: 5px;
+  &.small {
+    display: inline-block;
+  }
+}
+.mw-btn1 {
+  @include btn1
+}
+
+@mixin menu {
+  @include btn1;
+  padding: 17px;
+  display: inline-block;
+  position: relative;
+  margin: 10px 10px 0 0;
+  &:after {
+    content:" ";
+    @include sprites-menu;
+    position: absolute;
+    top: 9px;
+    left: 5px;
+  }
+}
+.mw-menu {
+  @include menu;
 }
 
 // Bars and Accordions
@@ -43,17 +81,19 @@ $border3:       1px solid $border_color3;
   border-top: $border1;
   color: $color3;
   text-decoration: none;
+  position: relative;
   a {
     display: block;
     color: $color2;
     padding: $spacing;
   }
-  > .arrow {
+  &:after {
+        content: " ";
     @include sprites-chevron-right;
     position: absolute;
     right: 9px;
-    font-size: 32px;
-    content: "";
+    top: 50%;
+    margin-top: -9px;
     padding: 0;
     opacity: 0.6;
   }
@@ -66,20 +106,23 @@ $border3:       1px solid $border_color3;
   height: 20px;
   color: $color3;
   text-decoration: none;
+  position: relative;
   a {
     display: block;
     color: $color2;
     padding: $spacing;
   }
-
-  /* accordion closed */
-  &[data-ur-state="disabled"] {
     &:after {
       position: absolute;
       right: 5px;
+      top: 50%;
       font-size: 32px;
-      margin-top: -25px;
+      margin-top: -16px;
       content: "";
+    }
+  /* accordion closed */
+  &[data-ur-state="disabled"] {
+    &:after {
       @include sprites-gray_plus;
     }
   }
@@ -87,11 +130,6 @@ $border3:       1px solid $border_color3;
   /* accordion open */
   &[data-ur-state="enabled"] {
     &:after {
-      position: absolute;
-      right: 5px;
-      font-size: 32px;
-      margin-top: -25px;
-      content: "";
       @include sprites-gray_minus;
     }
   }
@@ -103,4 +141,25 @@ $border3:       1px solid $border_color3;
 
 .mw_bar2 {
   @include bar2;
+}
+.mw-sub-section {
+  color: $color3;
+}
+.mw-box-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+}
+.mw-box-flex1 {
+  display: block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  
 }
