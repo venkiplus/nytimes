@@ -23,6 +23,9 @@ $box-shadow-demo-inset:   inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 1px 
 //$box-shadow-demo-inset2:   inset 0 1px 0 rgba(0,0,0, 0.5), inset 0 -1px 1px rgba(0,0,0,.5);
 $box-shadow-demo-pers-nav: 0px 0px 6px 3px rgba(0, 0, 0, 0.25);
 
+a {
+  color: $link_color;
+}
 
 //gray bar color
 @mixin grad1 {
