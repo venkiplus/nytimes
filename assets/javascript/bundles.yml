@@ -5,7 +5,7 @@
   - host_map.js
   - vendor/jquery-1.9.1.min.js
   # - http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.133/uranium.js
-  # using XUI uranium because the jqUranium is too buggy 
+  # using XUI uranium because jqUranium is too buggy 
   - http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.124/uranium-pretty.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/moovweb.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/gsub.js
