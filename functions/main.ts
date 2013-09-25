@@ -60,11 +60,11 @@
     add_class("mw_was_table")
 
     $(".//table | .//tr | .//td | .//th | .//thead | .//tfoot | .//tbody | .//col | .//colgroup | .//caption") {
-      # %i = index()
-      # %n = name()
+      %i = index()
+      %n = name()
       name("div")
-      # attributes(data-mw-id: concat("mw_dump_", %n, %i), width: "")
-      # add_class(concat("mw_was_", %n))
+      attributes(data-mw-id: concat("mw_dump_", %n, %i), width: "")
+      add_class(concat("mw_was_", %n))
     }
 
   #   yield()
@@ -366,19 +366,21 @@
 }
 
 
-
+# Remove any occurence of this string within the current scope
 @func XMLNode.remove_string(Text %string) {
   inner() {
     replace(%string, "")
   }
 }
 
-# # creates bootstrap accordion bars from content
-# @func XMLNode.accordionize(Text %button, Text %content) {
-#   $(%button) {
-#     name("div")
-#     add_class("mw_bar2")
-#   }
-#   $()
-# }
-# @func XMLNode.remove_inline_styles() {
+# removes current node if these 2 conditions are met-
+# 1) current node contains no child nodes (except text nodes)
+# 2) if the current node does have text nodes, they must be 
+# empty or all whitespace or only html comments to be removed
+@func XMLNode.remove_self_if_empty() {
+  $("./self::*[not(*)]") {
+    match(fetch("./text()"), /\A[\s]*|\<\!\-\-.*\-\-\>\Z/) {
+      remove()    
+    }
+  }
+}
