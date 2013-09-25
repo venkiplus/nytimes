@@ -23,12 +23,10 @@
     text-align: center;
   }
   #date {
-    padding: 0 $spacing;
+    padding: 0 5px;
+    clear: both;
   }
   #mw-pers-nav-menu {
     float: right;
-  }
-  #date {
-    clear: both;
   }
 }

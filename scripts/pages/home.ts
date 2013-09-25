@@ -42,7 +42,7 @@ $("./body") {
         }
         # make a uranium toggler where first element is the button and second is the content 
         ur_toggler("./div","./ul")
-        }
+      }
       # Implementing the image carousel at the top of the page
       insert_before("div", class: "mw-keep") {      
         ur_carousel("/html/body/div[@id = 'mw-body-content']/div[@id='shell']//table[@id='insideNYTimesBrowser']//a[img]")
