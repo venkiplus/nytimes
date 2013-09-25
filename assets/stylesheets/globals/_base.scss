@@ -43,7 +43,33 @@ h6 {
 .gapped {
   margin: $spacing;
 }
-
+.mw-side-pad {
+    padding: 0 $spacing;
+}
+img {
+  max-width: 100%;
+}
+.mw-box1 {
+  padding: $spacing;
+  border: $border1;
+  border-radius: 3px;
+  background: #fff;
+}
+.mw-h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  a {
+    color: #333;
+  }
+}
+.mw-h4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+.mw-center {
+  text-align: center;
+}
 // Essential CSS for the Uranium widgets to work. For more
 // information, see http://uraniumjs.com
 
@@ -146,4 +172,7 @@ $slider-width: 255px;
     opacity: 1;
     @include prefixer(transition-delay, 0s);
   }
+}
+.ui-loader {
+  display: none;
 }
