@@ -29,6 +29,18 @@ match($status) {
         log("--> Importing pages/article.ts in mappings.ts")
         @import pages/article.ts
       }
+      # Login
+      # EX URL: https://myaccount.nytimes.com/auth/login?URI=http://
+      with(/auth\/login/) {
+        log("--> Importing pages/login.ts in mappings.ts")
+        @import pages/login.ts
+      }
+      # Logout
+      # EX URL: https://myaccount.nytimes.com/gst/signout
+      with(/gst\/signout/) {
+        log("--> Importing pages/logout.ts in mappings.ts")
+        @import pages/logout.ts
+      }
       else() {
         log("--> No page match in mappings.ts, out of scope")
         @import pages/out_of_scope.ts

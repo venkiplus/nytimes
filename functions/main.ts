@@ -90,7 +90,7 @@
     match(%style) {
       with(/color\:\s*red/i) {
         add_class("alert alert-error")
-        add_class("mw_error")
+        add_class("mw-error")
       }
     }
   }
