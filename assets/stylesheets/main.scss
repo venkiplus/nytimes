@@ -6,6 +6,7 @@
 // Base file contains all the global styles
 @import "globals/_lib";
 @import "globals/_base";
+@import "globals/_form";
 
 // Header & Footer
 @import "sections/_header";
@@ -15,6 +16,7 @@
 @import "pages/_home";
 @import "pages/_article";
 @import "pages/_out_of_scope";
+@import "pages/_login";
 
 // Sample code for the Tritium tester
 // sandbox area
