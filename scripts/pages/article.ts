@@ -53,7 +53,7 @@ $("./body") {
       $(".//div[contains(@class, 'columnGroup')]") {
         remove_self_if_empty()
       }
-      $(".//div[contains(@class, 'articleInline')][./div[@class = 'story' or contains(@class, 'columnGroup')]]") {
+      $(".//div[contains(@class, 'articleInline')][./div[contains(@class, 'story') or contains(@class, 'columnGroup')]]") {
             move_to("..", "bottom")
             add_class("mw-box1 gapped")
             $(".//div[@class = 'thumbnail' or @class = 'runaroundRight']") {
