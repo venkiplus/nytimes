@@ -221,6 +221,9 @@ $slider-width: 255px;
     display: inline-block;
     margin-right: 5px;
   }
+  >:last-child {
+    @include box-shadow($box-shadow-demo-pers-nav);
+  }
 }
 .ui-loader {
   display: none;
