@@ -49,6 +49,12 @@ $("./body") {
         $("./div[@data-ur-carousel-button-type]") {
           inner("")
         }
+        $(".//div[@data-ur-carousel-component = 'count']") {
+          add_class("mw-hide")
+        }
+        $(".//div[@data-ur-carousel-component = 'view_container']") {
+          insert_bottom("div", data-ur-carousel-component: "dots", class: "mw-dots")
+        }
         # enable auto scroll, ability to swipe and fill width with 1 item
         attributes(data-ur-autoscroll: "enabled", data-ur-touch: "enabled", data-ur-fill: "1")
       }
