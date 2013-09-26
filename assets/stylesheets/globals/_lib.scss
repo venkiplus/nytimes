@@ -91,14 +91,13 @@ a {
     padding: $spacing;
   }
   &:after {
-    content: " ";
-    @include sprites-chevron-right;
+    @include sprites-gray_r;
     position: absolute;
-    right: 9px;
+    right: 5px;
     top: 50%;
-    margin-top: -9px;
-    padding: 0;
-    opacity: 0.6;
+    font-size: 32px;
+    margin-top: -16px;
+    content: "";
   }
 }
 // accordion bar
@@ -112,7 +111,6 @@ a {
   position: relative;
   a {
     display: block;
-    color: $color2;
     padding: $spacing;
   }
   /* accordion closed */
@@ -147,6 +145,17 @@ a {
 .mw_bar2 {
   @include bar2;
 }
+a.mw_bar2 {
+  &:after {
+    content: " ";
+    @include sprites-gray_r;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    font-size: 32px;
+    margin-top: -16px;
+  }
+}
 
 .mw-sub-section {
   color: $color3;
@@ -167,5 +176,4 @@ a {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
-  
 }

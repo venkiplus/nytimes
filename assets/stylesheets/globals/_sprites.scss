@@ -1,7 +1,7 @@
 $sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
 
 $sprites-width: 71px;
-$sprites-height: 239px;
+$sprites-height: 264px;
 
 $sprites-chevron-left-x: 0px;
 $sprites-chevron-left-y: 0px;
@@ -28,18 +28,23 @@ $sprites-gray_r-y: -112px;
 $sprites-gray_r-width: 71px;
 $sprites-gray_r-height: 36px;
 
+$sprites-i-x: 0px;
+$sprites-i-y: -149px;
+$sprites-i-width: 24px;
+$sprites-i-height: 24px;
+
 $sprites-light_gray_l-x: 0px;
-$sprites-light_gray_l-y: -149px;
+$sprites-light_gray_l-y: -174px;
 $sprites-light_gray_l-width: 71px;
 $sprites-light_gray_l-height: 36px;
 
 $sprites-light_gray_r-x: 0px;
-$sprites-light_gray_r-y: -186px;
+$sprites-light_gray_r-y: -211px;
 $sprites-light_gray_r-width: 71px;
 $sprites-light_gray_r-height: 36px;
 
 $sprites-menu-x: 0px;
-$sprites-menu-y: -223px;
+$sprites-menu-y: -248px;
 $sprites-menu-width: 24px;
 $sprites-menu-height: 16px;
 
@@ -73,20 +78,26 @@ $sprites-menu-height: 16px;
   height: 36px;
 }
 
-@mixin sprites-light_gray_l() {
+@mixin sprites-i() {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -149px;
+  width: 24px;
+  height: 24px;
+}
+
+@mixin sprites-light_gray_l() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -174px;
   width: 71px;
   height: 36px;
 }
 
 @mixin sprites-light_gray_r() {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -186px;
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -211px;
   width: 71px;
   height: 36px;
 }
 
 @mixin sprites-menu() {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -223px;
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -248px;
   width: 24px;
   height: 16px;
 }
@@ -121,20 +132,26 @@ $sprites-menu-height: 16px;
   height: 36px;
 }
 
-.sprites-light_gray_l {
+.sprites-i {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -149px;
+  width: 24px;
+  height: 24px;
+}
+
+.sprites-light_gray_l {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -174px;
   width: 71px;
   height: 36px;
 }
 
 .sprites-light_gray_r {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -186px;
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -211px;
   width: 71px;
   height: 36px;
 }
 
 .sprites-menu {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -223px;
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -248px;
   width: 24px;
   height: 16px;
 }

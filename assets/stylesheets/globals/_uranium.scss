@@ -36,11 +36,12 @@ div[data-ur-carousel-component="scroll_container"] {
     float:left;
   }
 }
-a[data-ur-carousel-component="item"] {
+[data-ur-carousel-component="item"] {
   img {
     -webkit-user-drag: none; // needed to work on desktop
   }
 }
+
 [data-ur-carousel-component="dots"] {
   text-align:center;
   margin-bottom:10px;
