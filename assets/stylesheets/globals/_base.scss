@@ -131,25 +131,44 @@ div[data-ur-carousel-component="button"][data-ur-state="disabled"] {
 div[data-ur-carousel-button-type="prev"] {
   position: absolute;
   top: 50%;
-  margin-top: -9px;
+  margin-top: -30px;
   left: 5px;
   opacity: 0.6;
-  @extend .sprites-chevron-left;
+  padding: 15px;
+  background: #ccc;
+  border-radius: 0 5px 5px 0;
+  &:after {
+    content: "";
+    position: absolute;
+    @extend .sprites-chevron-left;
+    z-index: 1;
+    top: 7px;
+    left: 9px;
+  }
 }
 div[data-ur-carousel-button-type="next"] {
   position: absolute;
   top: 50%;
-  margin-top: -9px;
+  margin-top: -30px;
   right: 5px;
   opacity: 0.6;
-  @extend .sprites-chevron-right;
+  padding: 15px;
+  background: #ccc;
+  border-radius: 5px 0 0 5px;
+  &:after {
+    content: "";
+    position: absolute;
+    @extend .sprites-chevron-right;
+    z-index: 1;
+    top: 7px;
+    right: 9px;
+  }
 }
 div[data-ur-carousel-component="count"] {
   text-align:center;
-  width: 85%;
   clear:both;
   margin-top: 7px;
-  display: inline-block;
+  display: block;
 }
 .mw-box-shadow {
   @include box-shadow($box-shadow-demo-pers-nav);
@@ -198,7 +217,22 @@ $slider-width: 255px;
     opacity: 1;
     @include prefixer(transition-delay, 0s);
   }
+  .sprites-dude {
+    display: inline-block;
+    margin-right: 5px;
+  }
 }
 .ui-loader {
   display: none;
+}
+$errorText:               #b94a48 !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+.errorContainer, .mw-error {
+  padding: $spacing;
+  color: $errorText;
+  border: 1px solid $errorBorder;
+  @include border-radius(5px);
+  background: $errorBackground;
+  position: relative;
 }
