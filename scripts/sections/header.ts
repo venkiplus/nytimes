@@ -5,21 +5,15 @@ $("./body") {
          add_class("mw-testing")
          remove("@width")
          remove("@height")
-         # if this is the article page
-         $("self::img[@id ='NYTLogo']/..") {
-          add_class("mw-box-flex1")
-          $("..") {
-            add_class("mw-box-flex")
-          }
-         }
-       }
-       # Sub-section
-       move_here("//div[@id = 'masthead']/h2/a", "after") {
-         add_class("mw-sub-section mw-box-flex1")
        }
      }
      # persistent navigation button
      insert_bottom("div", id: "mw-pers-nav-menu", class: "mw-pers-nav-toggler mw-menu small")
+     # Sub-section
+     move_here("//div[@id = 'masthead']/h2/a", "bottom") {
+       add_class("mw-sub-section")
+     }
+     # date section on home page
      move_here("//div[@id='date']") 
      $$("#date > p") {
        wrap_text_children("span", id: "day")
@@ -68,11 +62,14 @@ $("./body") {
             attributes(href: "")
             add_class("mw_toggler_bar mw_bar2")
           }
+          $(".//li/a") {
+            add_class("mw_bar1")
+          }
           # make a uranium toggler where first element is the button and second is the content 
           ur_toggler("./div","./ul")
         }
-        $(".//li/a") {
-          add_class("mw_bar1")
+        $("./li/a") {
+          add_class("mw_bar2")
         }
       }
     }

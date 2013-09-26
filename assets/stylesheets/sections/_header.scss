@@ -13,13 +13,18 @@
     max-width: 75%;
   }
   #NYTLogo {
-    margin: $spacing 0;
+    margin: $spacing 0 0;
   }
   .mw-sub-section {
-    padding: 15px 10px 0 0;
+    display: inline-block;
+    clear: both;
     font-size: 1.6em;
+    padding: 0 10px 5px;
   }
   #date {
+    padding: 0 5px;
+    clear: both;
+    text-align: center;
     p {
       margin: 0px;
     }
@@ -30,5 +35,8 @@
     .timestamp {
       color: #a81817;
     }
+  }
+  #mw-pers-nav-menu {
+    float: right;
   }
 }
