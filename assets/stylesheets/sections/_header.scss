@@ -2,12 +2,16 @@
 //  text-align: center;
   margin-bottom: 10px;
   border-bottom: 1px solid gray;
+  min-height: 56px;
   img {
     max-width: 100%;
     max-height: 50px;
   }
   .mw-logo {
     padding: 10px 10px 0;
+    max-width: 75%;
+    display: inline-block;
+    overflow: hidden;
   }
   #mastheadLogo {
     max-width: 75%;
@@ -16,7 +20,7 @@
     margin: $spacing 0 0;
   }
   .mw-sub-section {
-    display: inline-block;
+    display: block;
     clear: both;
     font-size: 1.6em;
     padding: 0 10px 5px;

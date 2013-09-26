@@ -1,6 +1,6 @@
 $("./body") {
    insert_top("header", class: "mw-header mw-keep") {
-     insert_top("a", class: "mw-logo", href: "/") {
+     insert_top("a", class: "mw-logo", href: "//"+$prefix + ".nytimes.com/") {
        move_here("//img[@id='mastheadLogo']|//img[@id = 'NYTLogo']") {
          add_class("mw-testing")
          remove("@width")
@@ -70,6 +70,20 @@ $("./body") {
         }
         $("./li/a") {
           add_class("mw_bar2")
+        }
+      }
+      move_here("//ul[@id = 'mainTabs']//a") {
+        add_class("mw_bar2")
+      }
+      # Account sections (Login, Register, ...)
+      move_here("//ul[@id = 'memberTools']", "bottom") {
+        remove(".//div[@id = 'dual_hoverCraft']|./li[./a[@id = 'nyt-button-sub']]|./li[@class= 'cColumn-TextAdsHeader']")
+        $(".//li/a") {
+          add_class("mw_bar2")
+          # adding the div for the icon
+          $("self::a[contains(text(), 'Log')]") {
+            insert_top("div", class: "sprites-dude")
+          }
         }
       }
     }
