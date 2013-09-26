@@ -1,5 +1,6 @@
-x$(document).on("DOMContentLoaded", function() {
-  $ = jQuery;
+// if (typeof $ === 'undefined')
+//   $ = jQuery;
+jQuery(document).ready(function ($) {
   $(".mw-pers-nav-toggler").on('click', function() {
     $("#mw-pers-nav, #mw-pers-nav-mask, #mw-body-content").toggleClass("mw-pers-nav-active");
   });
