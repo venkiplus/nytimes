@@ -16,8 +16,8 @@ match($status) {
 
   with(/200/) {
     log("--> STATUS: 200")
-
     match($path) {
+      # Home page 
       with(/^\/$|^\/\?/) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts

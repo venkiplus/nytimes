@@ -16,6 +16,7 @@ $("./body") {
           remove("./@height")
           remove("./@width")
         }
+        # accordionize the caption and move it in place
         $(".//p[@class = 'caption']") {
           add_class("mw-box1")
           wrap("div", class: "mw-caption")
@@ -53,18 +54,19 @@ $("./body") {
       $(".//div[contains(@class, 'columnGroup')]") {
         remove_self_if_empty()
       }
+      # boxify content
       $(".//div[contains(@class, 'articleInline')][./div[contains(@class, 'story') or contains(@class, 'columnGroup')]]") {
-            move_to("..", "bottom")
-            add_class("mw-box1 gapped")
-            $(".//div[@class = 'thumbnail' or @class = 'runaroundRight']") {
-              add_class("mw-thumbnail")
-            }
-            $(".//div[@class = 'wideThumb']//img") {
-              remove("@width")
-              remove("@height")
-            }
-            remove_self_if_empty()
-          }
+        move_to("..", "bottom")
+        add_class("mw-box1 gapped")
+        $(".//div[@class = 'thumbnail' or @class = 'runaroundRight']") {
+          add_class("mw-thumbnail")
+        }
+        $(".//div[@class = 'wideThumb']//img") {
+          remove("@width")
+          remove("@height")
+        }
+        remove_self_if_empty()
+      }
     }
 
     # create carousel from Inside NYTimes.com section

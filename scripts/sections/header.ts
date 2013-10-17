@@ -1,28 +1,32 @@
 $("./body") {
-   insert_top("header", class: "mw-header mw-keep") {
-     insert_top("a", class: "mw-logo", href: "//"+$prefix + ".nytimes.com/") {
-       move_here("//img[@id='mastheadLogo']|//img[@id = 'NYTLogo']") {
-         add_class("mw-testing")
-         remove("@width")
-         remove("@height")
-       }
-     }
-     # persistent navigation button
-     insert_bottom("div", id: "mw-pers-nav-menu", class: "mw-pers-nav-toggler mw-menu small")
-     # Sub-section
-     move_here("//div[@id = 'masthead']/h2/a", "bottom") {
-       add_class("mw-sub-section")
-     }
-     # date section on home page
-     move_here("//div[@id='date']") 
-     $$("#date > p") {
-       wrap_text_children("span", id: "day")
-     }
-     move_here("selector", "position")
+  # adding the mobile header
+  insert_top("header", class: "mw-header mw-keep") {
+    # logo that is a go to home page link 
+    insert_top("a", class: "mw-logo", href: "//"+$prefix + ".nytimes.com/") {
+      # move the logo image here from the desktop HTML
+      move_here("//img[@id='mastheadLogo']|//img[@id = 'NYTLogo']") {
+        # remove inline style attributes
+        remove("@width")
+        remove("@height")
+      }
+    }
+    # persistent navigation button
+    insert_bottom("div", id: "mw-pers-nav-menu", class: "mw-pers-nav-toggler mw-menu small")
+    # Sub-section
+    move_here("//div[@id = 'masthead']/h2/a", "bottom") {
+      add_class("mw-sub-section")
+    }
+    # date section on some pages
+    move_here("//div[@id='date']") 
+    $$("#date > p") {
+      wrap_text_children("span", id: "day")
+    }
   }
+  # wrap the old body in a div 
   inner_wrap("div", id: "mw-body-content") {
     # persistent navigation
     insert_bottom("div", id: "mw-pers-nav-mask", class: "mw-pers-nav-toggler")
+    # insert the persistent navigation before #mw-body-content
     insert_before("div", id: "mw-pers-nav") {
       # Home page navigation
       move_here("//div[@id = 'HPLeftNav']") {
@@ -47,7 +51,7 @@ $("./body") {
           ur_toggler("./div[contains(@class, 'mw_bar2')]","./ul")
         }
       }
-      # navigation on non home page
+      # Non home page navigation
       move_here("//div[contains(@class, 'navigation tabsContainer')]/ul", "bottom") {
         add_class("mw-box-shadow")
         $("./li[contains(@class, 'selected')]") {

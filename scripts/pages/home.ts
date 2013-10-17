@@ -47,6 +47,7 @@ $("./body") {
       insert_before("div", class: "mw-keep") {      
         ur_carousel("/html/body/div[@id = 'mw-body-content']/div[@id='shell']//table[@id='insideNYTimesBrowser']//a[img]")
         $("./div[@data-ur-carousel-button-type]") {
+          # empty the button's inner html
           inner("")
         }
         $(".//div[@data-ur-carousel-component = 'count']") {
@@ -59,7 +60,7 @@ $("./body") {
         attributes(data-ur-autoscroll: "enabled", data-ur-touch: "enabled", data-ur-fill: "1")
       }
     }
-
+    # Hide everything that isn't marked to keep
     $("./*[not(contains(@class, 'mw-keep'))]") {
      add_class("mw-hide")
     }
