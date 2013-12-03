@@ -9,7 +9,7 @@ $("/html") {
 
   remove_all_styles()
   # Remove all scripts that we don't use
-  # remove("//script[@src]")
+  remove("//script[@src]")
 
   add_assets()
 
