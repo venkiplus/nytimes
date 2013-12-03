@@ -1,3 +1,75 @@
+
+# Remove any occurence of this string within the current scope
+@func XMLNode.remove_string(Text %string) {
+  inner() {
+    replace(%string, "")
+  }
+}
+
+@func XMLNode.scaffold_items() {
+  $(".//div[@id='main']") {
+    $("./div[contains(@class, 'baseLayoutBelowFold')]") {
+      $(".//div[contains(@class, 'abColumn')]") {
+        add_class("mw-keep")
+        move_to("/html/body/div[@id = 'mw-body-content']/header[contains(@class, 'mw-header')]", "after")
+      }
+    }
+  }
+}
+
+@func XMLNode.accordionize_items() {
+  $("./h6") {
+    $("./a") {
+      # we remove the '»' from the end of the h6
+      remove_string("»")
+      copy_to("ancestor::div[1]/ul", "bottom") {
+        text() {
+          prepend("More ")
+        }
+        wrap("li")
+        wrap("h6")
+      }
+      name("div")
+    }
+    add_class("mw_bar2")
+    name("div")
+  }
+  $("./ul/li") {
+    $("./h6/a") {
+      add_class("mw_bar1")
+    }
+    $("./a[contains(@class, 'thumb')]") {
+      add_class("padded pull-left")
+    }
+  }
+}
+
+
+@func XMLNode.beautify_carousel() {
+  $("./div[@data-ur-carousel-button-type]") {
+    # empty the button's inner html
+    inner("")
+  }
+  $(".//div[@data-ur-carousel-component = 'count']") {
+    add_class("mw-hide")
+  }
+  $(".//div[@data-ur-carousel-component = 'view_container']") {
+    insert_bottom("div", data-ur-carousel-component: "dots", class: "mw-dots")
+  }
+  # enable auto scroll, ability to swipe and fill width with 1 item
+  attributes(data-ur-autoscroll: "enabled", data-ur-touch: "enabled", data-ur-fill: "1")
+}
+
+
+
+@func XMLNode.template_clean() {
+  $("./*[not(contains(@class, 'mw-keep'))]") {
+   add_class("mw-hide")
+  }
+}
+
+
+
 ####################
 ### Site Functions
 ####################
@@ -366,21 +438,15 @@
 }
 
 
-# Remove any occurence of this string within the current scope
-@func XMLNode.remove_string(Text %string) {
-  inner() {
-    replace(%string, "")
-  }
-}
 
 # removes current node if these 2 conditions are met-
 # 1) current node contains no child nodes (except text nodes)
-# 2) if the current node does have text nodes, they must be 
+# 2) if the current node does have text nodes, they must be
 # empty or all whitespace or only html comments to be removed
 @func XMLNode.remove_self_if_empty() {
   $("./self::*[not(*)]") {
     match(fetch("./text()"), /\A[\s]*|\<\!\-\-.*\-\-\>\Z/) {
-      remove()    
+      remove()
     }
   }
 }

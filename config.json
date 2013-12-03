@@ -46,5 +46,6 @@
 		"$.spiderbites.nytimes.com => spiderbites.nytimes.com",
 		"$.up.nytimes.com => up.nytimes.com",
 		"$.wt.o.nytimes.com => wt.o.nytimes.com"
-	]
+	],
+	"user_agent": "jefe"
 }
