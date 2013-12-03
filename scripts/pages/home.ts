@@ -25,7 +25,6 @@ $("./body") {
     # Hide everything that isn't marked to keep
     template_clean()
 
-
     # Optimize Images
     $(".//a[contains(concat(' ', @class, ' '), ' thumb ')]") {
       $("./img") {

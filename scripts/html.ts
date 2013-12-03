@@ -17,5 +17,9 @@ $("/html") {
   @import sections/footer.ts
 
   @import mappings.ts
+
+  # Page Optimizations
+  move_css_above_scripts()
+
 }
 
