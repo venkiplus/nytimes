@@ -30,16 +30,16 @@ $("./body") {
     template_clean()
 
     # # Optimize Images
-    # $(".//a[contains(concat(' ', @class, ' '), ' thumb ')]") {
-    #   $("./img") {
-    #     # should drop images from ~7k to ~1k
-    #     perf.optimize_image() {
-    #       perf.format("webp")
-    #        perf.height("50")
-    #       perf.width("50")
-    #       perf.quality("70")
-    #     }
-    #   }
-    # }
+    $(".//a[contains(concat(' ', @class, ' '), ' thumb ')]") {
+      $("./img") {
+        # should drop images from ~7k to ~1k
+        perf.optimize_image() {
+          perf.format("webp")
+           perf.height("50")
+          perf.width("50")
+          perf.quality("70")
+        }
+      }
+    }
   }
 }
