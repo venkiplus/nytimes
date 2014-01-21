@@ -7,6 +7,7 @@ $("/html") {
 
   # clean_mobile_meta_tags()
 
+<<<<<<< HEAD
   # remove_all_styles()
   # # Remove all scripts that we don't use
   # remove("//script[@src]")
@@ -21,5 +22,17 @@ $("/html") {
   # # Page Optimizations
   # move_css_above_scripts()
 
+=======
+  remove_all_styles()
+  # Remove all scripts that we don't use
+  remove("//script[@src]")
+  
+  add_assets()
+  
+  @import sections/header.ts
+  @import sections/footer.ts
+  
+  @import mappings.ts
+>>>>>>> parent of 58050a6... doing a demo
 }
 
