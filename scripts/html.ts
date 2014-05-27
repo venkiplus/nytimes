@@ -6,7 +6,6 @@ $("/html") {
   absolutize_srcs()
 
   clean_mobile_meta_tags()
-
   remove_all_styles()
   
   # # # Remove all scripts that we don't use
